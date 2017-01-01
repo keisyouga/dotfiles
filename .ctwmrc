@@ -1,0 +1,172 @@
+
+RandomPlacement "on"
+SloppyFocus
+"F1" = m : all : f.menu "defops"
+"F2" = m : all : f.raiselower
+"F3" = m : all : f.menu "windowops"
+"F4" = m : all : f.destroy
+"Tab" = m : all : f.forwiconmgr
+"F12" = m : all : f.restart
+"F1" = c : all : f.gotoworkspace "One"
+"F2" = c : all : f.gotoworkspace "Two"
+"F3" = c : all : f.gotoworkspace "Three"
+"F4" = c : all : f.gotoworkspace "Four"
+
+##########
+# copy from /etc/X11/ctwm/system.ctwmrc
+##########
+NoGrabServer
+RestartPreviousState
+DecorateTransients
+TitleFont	"-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
+ResizeFont	"-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
+MenuFont	"-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
+IconFont	"-adobe-helvetica-bold-r-normal--*-100-*-*-*-*-*-*"
+IconManagerFont	"-adobe-helvetica-bold-r-normal--*-100-*-*-*-*-*-*"
+ShowWorkSpaceManager			# start with workspace manager up
+UseThreeDMenus
+UseThreeDTitles
+UseThreeDIconManagers
+UseThreeDBorders
+UseThreeDWMap
+SunkFocusWindowTitle
+
+WorkSpaceManagerGeometry        "360x60+60-0" 4
+WorkSpaces {
+    "One"   {"rgb:0/6/6" "rgb:f/f/f" "rgb:0/6/6" "rgb:f/f/f"}
+    "Two"   {"rgb:4/4/6" "rgb:f/f/f" "rgb:4/4/6" "rgb:f/f/f"}
+    "Three" {"rgb:6/4/4" "rgb:f/f/f" "rgb:6/4/4" "rgb:f/f/f"}
+    "Four"  {"rgb:6/6/6" "rgb:f/f/f" "rgb:6/6/6" "rgb:f/f/f"}
+    "Five"  {"rgb:0/4/4" "rgb:f/f/f" "rgb:0/4/4" "rgb:f/f/f"}
+    "Six"   {"rgb:2/2/4" "rgb:f/f/f" "rgb:2/2/4" "rgb:f/f/f"}
+    "Seven" {"rgb:4/2/2" "rgb:f/f/f" "rgb:4/2/2" "rgb:f/f/f"}
+    "Eight" {"rgb:4/4/4" "rgb:f/f/f" "rgb:4/4/4" "rgb:f/f/f"}
+}
+
+Color {
+    BorderColor           "rgb:0/0/8"
+    DefaultBackground     "rgb:0/8/0"
+    DefaultForeground     "rgb:e/e/e"
+    BorderTileBackground  "rgb:0/8/8"
+    BorderTileForeground  "rgb:0/0/0"
+    TitleBackground       "rgb:0/b/b"
+    TitleForeground       "rgb:0/0/f"
+    MenuBackground        "rgb:f/f/0"
+    MenuForeground        "rgb:0/0/f"
+    MenuTitleBackground   "rgb:b/0/0"
+    MenuTitleForeground   "rgb:b/b/0"
+    IconBackground        "rgb:0/b/b"
+    IconForeground        "rgb:f/f/f"
+    IconBorderColor       "rgb:d/d/d"
+    IconManagerBackground "rgb:0/8/8"
+    IconManagerForeground "rgb:0/f/f"
+    MapWindowBackground   "rgb:8/8/8"
+    MapWindowForeground   "rgb:0/0/0"
+}
+
+IconManagerDontShow {	# do not display these windows in the icon manager
+}
+
+NoTitle {		# do not place a title bar on these windows
+}
+
+IconManagerGeometry		"202x300-0+0" 1
+IconManagerDontShow {
+    "WorkSpaceManager"
+}
+
+AutoRaise {		# automatically raise these windows
+}
+
+#
+# Define some useful functions for motion-based actions.
+#
+MoveDelta 3
+Function "move-or-lower" { f.move f.deltastop f.lower }
+Function "move-or-raise" { f.move f.deltastop f.raise }
+Function "move-or-iconify" { f.move f.deltastop f.iconify }
+
+#
+# Set some useful bindings.  Sort of uwm-ish, sort of simple-button-ish
+#
+Button1 =	: root		: f.menu "defops"
+Button2 =	: root		: f.menu "windowops"
+
+Button1 = m	: window|icon	: f.function "move-or-lower"
+Button2 = m	: window|icon	: f.iconify
+Button3 = m	: window|icon	: f.function "move-or-raise"
+
+Button1 =	: title		: f.function "move-or-raise"
+Button2 =	: title		: f.raiselower
+
+Button1 =	: icon		: f.function "move-or-iconify"
+Button2 =	: icon		: f.iconify
+
+Button1 =	: iconmgr	: f.iconify
+Button2 =	: iconmgr	: f.iconify
+
+Button1 =	: frame		: f.resize
+Button1 = m	: frame		: f.move
+Button2 =	: frame		: f.raiselower
+#
+# And a menus with the usual things
+#
+menu "defops" {
+    "Main Menu"			f.title
+    "Debian"			f.menu "/Debian"
+    ""				f.separator
+    "Show Icon Manager"		f.showiconmgr
+    "Hide Icon Manager"		f.hideiconmgr
+    ""				f.separator
+    "Show WorkSpace Manager"	f.showworkspacemgr
+    "Hide WorkSpace Manager"	f.hideworkspacemgr
+    ""				f.separator
+    "Refresh screen"		f.refresh
+    ""				f.separator
+    "Exit"			f.menu "Quit-Verify"
+}
+
+menu "Quit-Verify" {
+    "Really quit ctwm?"		f.title
+    "No, restart ctwm"		f.restart
+    "Yes, really quit"		f.quit
+}
+
+menu "windowops" {
+    "Window Ops"		f.title
+    "Occupy..."			f.occupy
+    "Occupy All"		f.occupyall
+    "Vanish"			f.vanish
+    ""				f.separator
+    "(De)Iconify"		f.iconify
+    "Refresh"			f.winrefresh
+    "Info..."			f.identify
+    ""				f.separator
+    "Resize"			f.resize
+    "(Un)Squeeze"		f.squeeze
+    "Zoom"			f.menu "zoomops"
+    ""				f.separator
+    "Move"			f.move
+    "Pack move"			f.movepack
+    "Push move"			f.movepush
+    ""				f.separator
+    "Restart animations"	f.startanimation
+    "Freeze animations"		f.stopanimation
+    ""				f.separator
+    "Close"			f.delete
+    "Kill"			f.destroy
+}
+
+menu "zoomops" {
+    "Zoom Ops"			f.title
+    "Full zoom"			f.fullzoom
+    "Horizontal zoom"		f.horizoom
+    "Vertical zoom"		f.zoom
+    "Top zoom"			f.topzoom
+    "Bottom zoom"		f.bottomzoom
+    "Left zoom"			f.leftzoom
+    "Right zoom"		f.rightzoom
+}
+
+undivert(`/etc/X11/ctwm/menudefs.hook')
+##########
