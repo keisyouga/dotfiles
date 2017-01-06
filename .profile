@@ -21,6 +21,7 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-
 export PAGER='less -r'
 export EDITOR='vi'
+
+fortune
