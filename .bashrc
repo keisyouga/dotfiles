@@ -29,7 +29,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export LESS='-R -i'
+export LESS='-r -i'
 export LESS_TERMCAP_mb=$(printf "\e[1;31m")
 export LESS_TERMCAP_md=$(printf "\e[1;31m")
 export LESS_TERMCAP_me=$(printf "\e[0m")
