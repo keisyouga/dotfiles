@@ -39,8 +39,8 @@ set wrap
 "utf-8文字の変換に失敗することがある
 set encoding=utf-8
 
-"タブと行末を強調する
-set list
+"タブと行末を強調するか
+set nolist
 set listchars=eol:$,tab:>-,extends:>,precedes:<
 
 "East Asian Ambiguous Width Character を全角とする
