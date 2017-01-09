@@ -34,6 +34,8 @@ set wrap
 "折り返した行の先頭に `+++ ' を表示する
 "set linebreak
 "set showbreak="+++ "
+"行番号の位置まで折り返す
+"set cpoptions+="n"
 
 "encoding=cp932 (default) だと文字コード自動判別が間違うことが多く、
 "utf-8文字の変換に失敗することがある
