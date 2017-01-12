@@ -50,8 +50,9 @@ set listchars=eol:$,tab:>-,extends:>,precedes:<
 "listchars, fillchars に全角の可能性がある文字が使えなくなる
 set ambiwidth=double
 
-"カーソル行を強調する
+"カーソル位置を強調する
 "set cursorline
+"set cursorcolumn
 
 set history=1000
 
