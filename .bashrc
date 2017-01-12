@@ -18,7 +18,8 @@ shopt -s checkwinsize
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 PROMPT_DIRTRIM=2
-PS1='\[\033[01;32m\]\u\[\033[00;32m\]@\h\[\033[00m\]:\[\033[34;47m\]\w\[\033[00m\]\$ ' 
+PS1='\[\0337\033[$((COLUMNS-8))G\033[33m\t\0338\]\[\033[01;32m\]\u\[\033[00;32m\]@\h\[\033[00m\]:\[\033[34;47m\]\w\[\033[00m\]\$ '
+
 
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
