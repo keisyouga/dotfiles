@@ -24,4 +24,4 @@ fi
 export PAGER='less'
 export EDITOR='vi'
 
-fortune
+which fortune > /dev/null && fortune
