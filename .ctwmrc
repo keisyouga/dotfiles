@@ -1,11 +1,16 @@
 
 RandomPlacement "on"
 SloppyFocus
+WindowRing
+WarpRingOnScreen
+StayUpMenus
+"Escape" = c : all : f.menu "defops"
 "F1" = m : all : f.menu "defops"
 "F2" = m : all : f.raiselower
 "F3" = m : all : f.menu "windowops"
 "F4" = m : all : f.destroy
-"Tab" = m : all : f.forwiconmgr
+"Tab" = m : all : f.warpring "next"
+"Tab" = m|s : all : f.warpring "prev"
 "F12" = m : all : f.restart
 "F1" = c : all : f.gotoworkspace "One"
 "F2" = c : all : f.gotoworkspace "Two"
