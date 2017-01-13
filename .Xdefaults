@@ -1,10 +1,8 @@
 
-
 *VT100.metaSendsEscape: true
 *VT100.faceSize: 12
 *VT100.faceName: DejaVu Sans Mono
 *VT100.faceNameDoublesize: IPAGothic
+*VT100.ximFont: * 
 
-
-XClock.Clock.analog: false
-
+XClock.Clock.analog: false 
