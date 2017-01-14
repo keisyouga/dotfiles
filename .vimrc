@@ -58,7 +58,7 @@ set history=1000
 
 if has("syntax")
 	syntax on
-	colorscheme evening
+	colorscheme desert
 endif
 
 set showcmd
