@@ -1,4 +1,5 @@
-"set fencs=iso-2022-jp,euc-jp,cp932,utf-8,ucs-bom.default,latin1
+"ファイルを読み込む時の文字コードの判定順序 
+set fencs=iso-2022-jp,utf-8,euc-jp,cp932,ucs-bom.default
 
 "編集中に `.<FILENAME>.swp' ファイルを作らない
 set noswapfile
