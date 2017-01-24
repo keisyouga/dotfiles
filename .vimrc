@@ -102,35 +102,20 @@ nnoremap <S-Down> <C-w>j
 "cnoremap <Esc>b <S-Left>
 "cnoremap <Esc>f <S-Right>
 
-
-
-
-" Only do this part when compiled with support for autocommands.
 if has("autocmd")
-
-  " Enable file type detection.
-  " Use the default filetype settings, so that mail gets 'tw' set to 72,
-  " 'cindent' is on in C files, etc.
-  " Also load indent files, to automatically do language-dependent indenting.
-  " Revert with ":filetype off".
-  filetype plugin indent on
-
-  " Put these in an autocmd group, so that you can revert them with:
-  " ":augroup vimStartup | au! | augroup END"
-  augroup vimStartup
-    au!
-
-    " When editing a file, always jump to the last known cursor position.
-    " Don't do it when the position is invalid or when inside an event handler
-    " (happens when dropping a file on gvim).
-    autocmd BufReadPost *
-      \ if line("'\"") >= 1 && line("'\"") <= line("$") |
-      \   exe "normal! g`\"" |
-      \ endif
-
-  augroup END
-
-endif " has("autocmd")
+	filetype plugin indent on
+	augroup vimStartup
+		au!
+		autocmd! filetype vim setlocal shiftwidth=2 tabstop=2
+		autocmd! filetype html setlocal shiftwidth=2 tabstop=2 expandtab
+		autocmd! filetype javascript setlocal shiftwidth=2 tabstop=2 expandtab
+		autocmd! filetype css setlocal shiftwidth=2 tabstop=2 expandtab
+		autocmd BufReadPost *
+					\ if line("'\"") >= 1 && line("'\"") <= line("$") |
+					\   exe "normal! g`\"" |
+					\ endif
+	augroup END
+endif
 
 " i, / で IME を ON にするか
 if has("multi_byte_ime")
