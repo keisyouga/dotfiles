@@ -160,11 +160,5 @@ inoremap <C-F4> <C-O><C-W>c
 cnoremap <C-F4> <C-C><C-W>c
 onoremap <C-F4> <C-C><C-W>c
 
-" prevent accidently only one window
-" 0: close, 1: only, 2: hsplit, 3: vsplit
-noremap <C-w><C-o> <C-w><C-w>
-noremap <C-w>o <C-w><C-w>
-noremap <C-w>0 <C-w>c
-noremap <C-w>1 <C-w>o
-noremap <C-w>2 <C-w>s
-noremap <C-w>3 <C-w>v
+nnoremap <C-n> :bnext<CR>
+nnoremap <C-p> :bprevious<CR>
