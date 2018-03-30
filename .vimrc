@@ -1,5 +1,5 @@
-"ファイルを読み込む時の文字コードの判定順序 
-set fencs=iso-2022-jp,utf-8,euc-jp,cp932,ucs-bom.default
+"ファイルを読み込む時の文字コードの判定順序
+set fencs=iso-2022-jp,utf-8,euc-jp,cp932,ucs-bom,default
 
 "編集中に `.<FILENAME>.swp' ファイルを作らない
 set noswapfile
@@ -9,6 +9,9 @@ set nobackup
 
 "保存時に `.<FILENAME>.un~' ファイルを作らない
 set noundofile
+
+"_viminfo ファイルを作らない
+set viminfo=
 
 "バッファに合わせてカレントディレクトリを変更する
 "注意：このオプションがオンになっていると動かないプラグインがある
@@ -27,7 +30,7 @@ set laststatus=2
 
 set statusline=%<%f\ %h%m%r\ %{'('.(&fenc!=''?&fenc:&enc).'-'.&ff.')'}\ %y%=%-14.(%l,%c%V%)\ %P
 
-"長い行を折り返す
+"長い行を折り返すか
 "水平スクロールコマンド: zh zl zH zL zs ze
 set wrap
 
@@ -35,15 +38,13 @@ set wrap
 "折り返した行の先頭に `+++ ' を表示する
 "set linebreak
 "set showbreak="+++ "
-"行番号の位置まで折り返す
-"set cpoptions+="n"
 
-"encoding=cp932 (default) だと文字コード自動判別が間違うことが多く、
+"encoding=cp932 (default) だと文字コード自動判別が間違うことが多いし
 "utf-8文字の変換に失敗することがある
 set encoding=utf-8
 
-"タブと行末を強調するか
-set nolist
+"タブと行末を強調する
+"set list
 set listchars=eol:$,tab:>-,extends:>,precedes:<
 
 "East Asian Ambiguous Width Character を全角とする
@@ -51,9 +52,8 @@ set listchars=eol:$,tab:>-,extends:>,precedes:<
 "listchars, fillchars に全角の可能性がある文字が使えなくなる
 set ambiwidth=double
 
-"カーソル位置を強調する
+"カーソル行を強調する
 "set cursorline
-"set cursorcolumn
 
 set history=1000
 
@@ -72,7 +72,7 @@ set hlsearch "highlight all matches
 noremap <F4> :set hlsearch! hlsearch?<CR>
 " Press F5 to insert current time
 noremap <F5> :call append(line('.') - 1, strftime("%c"))<CR>
-set nowrapscan
+set nowrapscan "最後の語句の次は最初の語句に戻る
 set wildmenu
 
 set hidden
@@ -103,7 +103,7 @@ nnoremap <S-Down> <C-w>j
 "cnoremap <Esc>f <S-Right>
 
 if has("autocmd")
-	filetype plugin indent on
+	filetype plugin indent on 
 	augroup vimStartup
 		au!
 		autocmd! filetype vim setlocal shiftwidth=2 tabstop=2
@@ -125,12 +125,12 @@ if has("multi_byte_ime")
 endif
 
 if has("gui")
-	" Alt-Space is System menu
-	noremap <M-Space> :simalt ~<CR>
-	inoremap <M-Space> <C-O>:simalt ~<CR>
-	cnoremap <M-Space> <C-C>:simalt ~<CR>
-	" C-z don't minimize
-	map <C-z> <Esc>
+" Alt-Space is System menu
+  noremap <M-Space> :simalt ~<CR>
+  inoremap <M-Space> <C-O>:simalt ~<CR>
+  cnoremap <M-Space> <C-C>:simalt ~<CR>
+" C-z don't minimize
+  map <C-z> <Esc>
 endif
 
 " CTRL-Tab is Next window
