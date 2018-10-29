@@ -110,6 +110,7 @@ if has("autocmd")
 		autocmd! filetype html setlocal shiftwidth=2 tabstop=2 expandtab
 		autocmd! filetype javascript setlocal shiftwidth=2 tabstop=2 expandtab
 		autocmd! filetype css setlocal shiftwidth=2 tabstop=2 expandtab
+		autocmd! filetype c,cpp,cc setlocal shiftwidth=4 tabstop=4
 		autocmd BufReadPost *
 					\ if line("'\"") >= 1 && line("'\"") <= line("$") |
 					\   exe "normal! g`\"" |
