@@ -72,6 +72,8 @@ set hlsearch "highlight all matches
 noremap <F4> :set hlsearch! hlsearch?<CR>
 " Press F5 to insert current time
 noremap <F5> :call append(line('.') - 1, strftime("%c"))<CR>
+" Press F6, easy switch buffer
+nnoremap <F6> :buffers<CR>:buffer<Space>
 set nowrapscan "最後の語句の次は最初の語句に戻る
 set wildmenu
 
