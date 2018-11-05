@@ -74,6 +74,8 @@ noremap <F4> :set hlsearch! hlsearch?<CR>
 noremap <F5> :call append(line('.') - 1, strftime("%c"))<CR>
 " Press F6, easy switch buffer
 nnoremap <F6> :buffers<CR>:buffer<Space>
+noremap <F9> :execute "wall \| copen \| wincmd p\| make"<cr>
+noremap <C-F9> :execute "wall \| copen \| wincmd p\| make run"<cr>
 set nowrapscan "最後の語句の次は最初の語句に戻る
 set wildmenu
 
