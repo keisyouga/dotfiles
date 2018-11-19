@@ -19,7 +19,9 @@ shopt -s checkwinsize
 
 # `\w' in PS1, show like `.../current/dir'
 PROMPT_DIRTRIM=2
-PS1='\[\033[01;32m\]\u\[\033[00;32m\]@\h\[\033[00m\]:\[\033[34;47m\]\w\[\033[00m\]\$ '
+#PS1='\[\033[01;32m\]\u\[\033[00;32m\]@\h\[\033[00m\]:\[\033[34;47m\]\w\[\033[00m\]\$ '
+GIT_PS1_SHOWDIRTYSTATE=1
+PS1='\[\033[01;32m\]\u\[\033[00;32m\]@\h\[\033[00m\]:\[\033[34;47m\]\w\[\033[00m\]$(__git_ps1 " (%s)")\$ '
 
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
