@@ -1,0 +1,28 @@
+vbell off
+startup_message off
+escape ^z^z
+bind z
+defscrollback 2000
+
+# show current command in title
+#shelltitle "$|bash"
+# in ~/.bashrc
+#   PROMPT_COMMAND='printf "\033k\033\134A"'
+
+bind k
+bind K
+bind ^k
+bind .
+bind ^\
+bind \\
+bind ^h
+bind h help
+bind j focus down
+bind k focus up
+bind t focus top
+bind b focus bottom
+
+
+hardstatus alwayslastline "%{dy}%Lw%=%H %Y-%m-%d %c:%s%{-}"
+layout new 1
+layout autosave on
