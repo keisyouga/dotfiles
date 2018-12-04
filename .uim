@@ -1,0 +1,30 @@
+
+;;; https://github.com/uim/uim-doc-ja/wiki/CustomizeUim
+
+(define default-im-name 'anthy)
+(define-key generic-on-key? '("<Control> "))
+(define-key generic-off-key? '("<Control> "))
+
+; remove starting with "l" or "q" from ja-rk-rule-basic
+(require "japanese.scm") 
+(define (remove-lq lst)
+  (if (null? lst)
+    lst 
+    (if (or (string=? (caaaar lst) "l")
+	    (string=? (caaaar lst) "q"))
+      (remove-lq (cdr lst))
+      (cons (car lst) (remove-lq (cdr lst))))
+    )
+  )
+(define ja-rk-rule-basic (remove-lq ja-rk-rule-basic))
+
+(define ja-rk-rule-basic
+  (append '(
+	    ((("q") . ()) ("っ" "ッ" "ｯ"))
+	    ((("l") . ()) ("ん" "ン" "ﾝ"))
+	    )
+	  ja-rk-rule-basic)) 
+
+(ja-rk-rule-update)
+
+;;; vim:ft=scheme:fenc=euc-jp
