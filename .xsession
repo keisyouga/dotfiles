@@ -3,4 +3,5 @@ xrdb -remove
 xterm -g +0+0 &
 xterm -g -0+0 +rv &
 xterm -g -0-0 -rv &
-exec jwm
+#exec jwm
+exec ctwm
