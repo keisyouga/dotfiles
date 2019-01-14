@@ -1,4 +1,5 @@
 
+NoDefaults
 RandomPlacement "on"
 SloppyFocus
 WindowRing
@@ -16,6 +17,34 @@ StayUpMenus
 "F2" = c : all : f.gotoworkspace "Two"
 "F3" = c : all : f.gotoworkspace "Three"
 "F4" = c : all : f.gotoworkspace "Four"
+LeftTitleButton ":xpm:menu" = f.menu "windowops"
+LeftTitleButton ":xpm:cross" = f.delete
+RightTitleButton  ":xpm:iconify" = f.iconify
+RightTitleButton "%xpm:resize" = f.resize
+
+# button pixmap test
+#LeftTitleButton ":xpm:menu" = f.nop
+#LeftTitleButton ":xpm:dot" = f.nop
+#LeftTitleButton ":xpm:cross" = f.nop
+#LeftTitleButton ":xpm:bar" = f.nop
+#LeftTitleButton ":xpm:vbar" = f.nop
+#LeftTitleButton ":xpm:iconify" = f.nop
+#LeftTitleButton ":xpm:resize" = f.nop
+#LeftTitleButton ":xpm:sunkresize" = f.nop
+#LeftTitleButton ":xpm:box" = f.nop
+#RightTitleButton "%xpm:resize" = f.nop
+#RightTitleButton "%xpm:menu-up" = f.nop
+#RightTitleButton "%xpm:menu-down" = f.nop
+#RightTitleButton "%xpm:resize-out-top" = f.nop
+#RightTitleButton "%xpm:resize-in-top" = f.nop
+#RightTitleButton "%xpm:resize-out-bot" = f.nop
+#RightTitleButton "%xpm:resize-in-bot" = f.nop
+#RightTitleButton "%xpm:maze-out" = f.nop
+#RightTitleButton "%xpm:maze-in" = f.nop
+#RightTitleButton "%xpm:zoom-out" = f.nop
+#RightTitleButton "%xpm:zoom-in" = f.nop
+#RightTitleButton "%xpm:zoom-inout" = f.nop
+
 
 ##########
 # copy from /etc/X11/ctwm/system.ctwmrc
