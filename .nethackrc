@@ -1,0 +1,42 @@
+OPTIONS=autodig
+OPTIONS=runmode:run
+OPTIONS=color
+OPTIONS=hilite_pet,hilite_pile
+OPTIONS=!implicit_uncursed
+OPTIONS=showrace,showscore,showexp,time
+#OPTIONS=symset:DECGraphics
+OPTIONS=DECGraphics
+OPTIONS=altmeta
+OPTIONS=lit_corridor
+OPTIONS=autodescribe
+OPTIONS=msghistory:20,msg_window:combination
+OPTIONS=use_darkgray,use_inverse
+OPTIONS=boulder:0
+SYMBOLS=S_ghost:X
+
+OPTIONS=statushilites:10
+OPTION=hilite_status: gold/up/yellow/down/brown
+OPTION=hilite_status: characteristics/up/green/down/red
+OPTION=hilite_status: hitpoints/100%/gray&normal
+OPTION=hilite_status: hitpoints/<100%/green&normal
+OPTION=hilite_status: hitpoints/<66%/yellow&normal
+OPTION=hilite_status: hitpoints/<50%/orange&normal
+OPTION=hilite_status: hitpoints/<33%/red&bold
+OPTION=hilite_status: hitpoints/<15%/red&inverse
+OPTION=hilite_status: condition/major/orange&inverse
+OPTION=hilite_status: condition/lev+fly/red&inverse
+
+OPTIONS=menucolors
+MENUCOLOR=" blessed "=green
+MENUCOLOR=" holy "=green
+MENUCOLOR=" cursed "=red
+MENUCOLOR=" unholy "=red
+MENUCOLOR=" cursed .* (being worn)"=orange&underline
+
+#OPTIONS=autopickup,pickup_types:$"=/!?+
+OPTIONS=autopickup,pickup_types:$/!?
+autopickup_exception="<full healing"
+autopickup_exception="<potion of extra healing"
+autopickup_exception="<potion of healing"
+autopickup_exception="<gain level"
+autopickup_exception=">scare monster"
