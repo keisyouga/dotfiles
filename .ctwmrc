@@ -20,7 +20,8 @@ StayUpMenus
 LeftTitleButton ":xpm:menu" = f.menu "windowops"
 LeftTitleButton ":xpm:cross" = f.delete
 RightTitleButton  ":xpm:iconify" = f.iconify
-RightTitleButton "%xpm:resize" = f.resize
+RightTitleButton ":xpm:resize" = f.resize
+RightTitleButton ":xpm:sunkresize" = f.fullzoom
 
 # button pixmap test
 #LeftTitleButton ":xpm:menu" = f.nop
