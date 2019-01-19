@@ -1,7 +1,8 @@
 
 NoDefaults
 RandomPlacement "on"
-SloppyFocus
+#SloppyFocus
+ClickToFocus
 WindowRing
 WarpRingOnScreen
 StayUpMenus
@@ -10,8 +11,10 @@ StayUpMenus
 "F2" = m : all : f.raiselower
 "F3" = m : all : f.menu "windowops"
 "F4" = m : all : f.destroy
-"Tab" = m : all : f.warpring "next"
-"Tab" = m|s : all : f.warpring "prev"
+#"Tab" = m : all : f.warpring "next"
+"Tab" = m : all : f.function "next-window"
+#"Tab" = m|s : all : f.warpring "prev"
+"Tab" = m|s : all : f.function "prev-window"
 "F12" = m : all : f.restart
 "F1" = c : all : f.gotoworkspace "One"
 "F2" = c : all : f.gotoworkspace "Two"
@@ -120,6 +123,8 @@ MoveDelta 3
 Function "move-or-lower" { f.move f.deltastop f.lower }
 Function "move-or-raise" { f.move f.deltastop f.raise }
 Function "move-or-iconify" { f.move f.deltastop f.iconify }
+Function "next-window" { f.unfocus f.warpring "next" }
+Function "prev-window" { f.unfocus f.warpring "prev" }
 
 #
 # Set some useful bindings.  Sort of uwm-ish, sort of simple-button-ish
