@@ -130,7 +130,7 @@ Function "prev-window" { f.unfocus f.warpring "prev" }
 # Set some useful bindings.  Sort of uwm-ish, sort of simple-button-ish
 #
 Button1 =	: root		: f.menu "defops"
-Button2 =	: root		: f.menu "windowops"
+Button3 =	: root		: f.menu "windowops"
 
 Button1 = m	: window|icon	: f.function "move-or-lower"
 Button2 = m	: window|icon	: f.iconify
