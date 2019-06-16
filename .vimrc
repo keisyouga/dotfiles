@@ -88,12 +88,14 @@ set autoindent
 "挿入モードのとき <BS> <Del> CTRL-W CTRL-U で削除できるようにする
 set backspace=indent,eol,start
 
+"if $USER != 'root'
+"	set modeline
+"else
+"	set nomodeline
+"endif
+" vulnerable vim version before 8.1.1365
+set nomodeline
 
-if $USER != 'root'
-	set modeline
-else
-	set nomodeline
-endif
 
 "ウィンドウ移動マップ追加
 nnoremap <S-Up> <C-w>k
