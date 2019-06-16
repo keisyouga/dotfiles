@@ -1,29 +1,21 @@
-
+;;; -*- mode: scheme; coding: euc-jp -*-
 ;;; https://github.com/uim/uim-doc-ja/wiki/CustomizeUim
 
 (define default-im-name 'anthy)
-(define-key generic-on-key? '("<Control> "))
-(define-key generic-off-key? '("<Control> "))
+(define-key generic-on-key? '("<Control>\\" "zenkaku-hankaku"))
+(define-key generic-off-key? '("<Control>\\" "zenkaku-hankaku"))
 
-; remove starting with "l" or "q" from ja-rk-rule-basic
+;; "l" => "§Û" "•Û" "é›"
+;; "q" => "§√" "•√" "éØ"
 (require "japanese.scm") 
-(define (remove-lq lst)
-  (if (null? lst)
-    lst 
-    (if (or (string=? (caaaar lst) "l")
-	    (string=? (caaaar lst) "q"))
-      (remove-lq (cdr lst))
-      (cons (car lst) (remove-lq (cdr lst))))
-    )
-  )
-(define ja-rk-rule-basic (remove-lq ja-rk-rule-basic))
-
-(define ja-rk-rule-basic
-  (append '(
-	    ((("l") . ()) ("„Å£" "„ÉÉ" "ÔΩØ"))
-	    ((("q") . ()) ("„Çì" "„É≥" "Ôæù"))
-	    )
-	  ja-rk-rule-basic)) 
+(set! ja-rk-rule-basic
+      (filter (lambda (x)
+                (not (or (equal? (caaar x) "l") (equal? (caaar x) "q"))))
+              ja-rk-rule-basic))
+(set! ja-rk-rule-basic
+      (append '(((("l") . ()) ("§Û" "•Û" "é›"))
+                ((("q") . ()) ("§√" "•√" "éØ")))
+              ja-rk-rule-basic)) 
 
 (ja-rk-rule-update)
 
