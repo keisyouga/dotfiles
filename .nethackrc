@@ -1,20 +1,31 @@
+# -*- conf -*-
+
+# curses interface
+#OPTIONS=windowtype=curses
+OPTIONS=symset:DECGraphics
+#OPTIONS=symset:default
+#OPTIONS=perm_invent
+OPTIONS=popup_dialog
+#OPTIONS=statuslines=3
+
 OPTIONS=autodig
 OPTIONS=runmode:run
 OPTIONS=color
 OPTIONS=hilite_pet,hilite_pile
 OPTIONS=!implicit_uncursed
 OPTIONS=showrace,showscore,showexp,time
-#OPTIONS=symset:DECGraphics
-OPTIONS=DECGraphics
 OPTIONS=altmeta
 OPTIONS=lit_corridor
 OPTIONS=autodescribe
-OPTIONS=msghistory:20,msg_window:combination
+#OPTIONS=msghistory:20,msg_window:combination
+OPTIONS=msghistory:200,msg_window:r
 OPTIONS=use_darkgray,use_inverse
 OPTIONS=boulder:0
 SYMBOLS=S_ghost:X
+#OPTIONS=menustyle:partial
 
 OPTIONS=statushilites:10
+OPTIONS=hitpointbar
 OPTION=hilite_status: gold/up/yellow/down/brown
 OPTION=hilite_status: characteristics/up/green/down/red
 OPTION=hilite_status: hitpoints/100%/gray&normal
@@ -32,11 +43,15 @@ MENUCOLOR=" holy "=green
 MENUCOLOR=" cursed "=red
 MENUCOLOR=" unholy "=red
 MENUCOLOR=" cursed .* (being worn)"=orange&underline
+MENUCOLOR=" uncursed "=white
 
 #OPTIONS=autopickup,pickup_types:$"=/!?+
 OPTIONS=autopickup,pickup_types:$/!?
+#OPTIONS=autopickup,pickup_types:$
 autopickup_exception="<full healing"
 autopickup_exception="<potion of extra healing"
 autopickup_exception="<potion of healing"
 autopickup_exception="<gain level"
 autopickup_exception=">scare monster"
+AUTOPICKUP_EXCEPTION=">:0\)"
+AUTOPICKUP_EXCEPTION=">named empty"
