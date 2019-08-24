@@ -9,7 +9,7 @@ export XMODIFIERS=@im=uim
 #uim-toolbar-gtk3 &
 
 xrdb -remove
-xterm -g -0+0 +rv &
+#xterm -g -0+0 +rv &
 xterm -g +0+0 -rv &
 #exec jwm
 #exec ctwm
