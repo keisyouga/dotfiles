@@ -4,5 +4,7 @@
 *VT100.faceName: DejaVu Sans Mono
 *VT100.faceNameDoublesize: IPAGothic
 *VT100.ximFont: * 
+*VT100.color4: lightblue
+*VT100.reverseVideo: true
 
 XClock.Clock.analog: false 
