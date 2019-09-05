@@ -12,6 +12,7 @@ OPTIONS=autodig
 OPTIONS=runmode:run
 OPTIONS=color
 OPTIONS=hilite_pet,hilite_pile
+OPTIONS=paranoid_confirmation:Confirm all
 OPTIONS=!implicit_uncursed
 OPTIONS=showrace,showscore,showexp,time
 OPTIONS=altmeta
