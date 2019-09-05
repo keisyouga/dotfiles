@@ -1,10 +1,34 @@
 
+!!! xterm
 *VT100.metaSendsEscape: true
-*VT100.faceSize: 8
-*VT100.faceName: DejaVu Sans Mono
-*VT100.faceNameDoublesize: IPAGothic
-*VT100.ximFont: * 
+
+!! freetype font
+!*VT100.faceSize: 12
+!*VT100.faceName: DejaVu Sans Mono
+!*VT100.faceNameDoublesize: IPAGothic
+
+!! bitmap font
+!*VT100.utf8: false
+!*VT100.font: 8x16
+!*VT100.font: -misc-ipagothic-medium-r-normal--16-0-0-0-c-0-iso8859-1
+
+!! 8x13
+!*VT100.utf8Fonts.font: 8x13
+!*VT100.utf8Fonts.wideFont: -misc-fixed-medium-r-normal-ja-13-120-75-75-c-120-iso10646-1
+
+!! ipa font
+!*VT100.utf8Fonts.font: 8x16
+!*VT100.utf8Fonts.font: -misc-ipagothic-medium-r-normal--16-0-0-0-c-0-iso8859-1
+!*VT100.utf8Fonts.wideFont: -misc-ipagothic-medium-r-normal--16-0-0-0-c-0-iso10646-1
+
+!! lucidasanstypewriter
+*VT100.utf8Fonts.font: lucidasanstypewriter-12
+*VT100.utf8Fonts.wideFont: -misc-fixed-medium-r-normal-ja-18-120-100-100-c-180-iso10646-1
+
+!*VT100.ximFont: *
 *VT100.color4: lightblue
 *VT100.reverseVideo: true
+!*VT100.scrollBar: true
 
-XClock.Clock.analog: false 
+!!! xclock
+!XClock.Clock.analog: false
