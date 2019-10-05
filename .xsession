@@ -11,6 +11,9 @@ export XMODIFIERS=@im=uim
 xrdb -remove
 #xterm -g -0+0 +rv &
 xterm -g +0+0 -rv &
-#exec jwm
+exec jwm
 #exec ctwm
-exec icewm
+#exec icewm
+#fspanel &
+#exec openbox
+#exec openbsd-cwm
