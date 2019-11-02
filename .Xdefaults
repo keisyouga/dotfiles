@@ -1,5 +1,7 @@
 
 !!! xterm
+XTerm*termName: xterm-256color
+UXTerm*termName: xterm-256color
 *VT100.metaSendsEscape: true
 
 !! freetype font
