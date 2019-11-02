@@ -8,6 +8,8 @@ export XMODIFIERS=@im=uim
 #uim-toolbar-gtk &
 #uim-toolbar-gtk3 &
 
+setxkbmap -model jp106 -layout jp,us,ru,gr -variant ,intl -option grp:shifts_toggle
+
 xrdb -remove
 #xterm -g -0+0 +rv &
 xterm -g +0+0 -rv &
