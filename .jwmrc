@@ -67,7 +67,7 @@
             <Opacity>1.0</Opacity>
         </Active>
     </WindowStyle>
-    <TrayStyle group="false" list="all">
+    <TrayStyle group="false" list="desktop">
         <Font>Sans-9</Font>
         <Background>#333333</Background>
         <Foreground>#FFFFFF</Foreground>
