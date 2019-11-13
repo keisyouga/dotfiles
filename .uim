@@ -5,6 +5,58 @@
 (define-key generic-on-key? '("<Control>\\" "zenkaku-hankaku"))
 (define-key generic-off-key? '("<Control>\\" "zenkaku-hankaku"))
 
+(define my-find-module
+  (lambda (scm)
+    (find-module-scm-path uim-plugin-scm-load-path scm)))
+
+(define my-rule1-setting
+  (list
+   '(label . hiragana)
+   '(autocommit . #t)
+   '(prediction . #t)
+   '(wildcard . #f)
+   (cons 'rulefile (my-find-module "hiragana-rule.data"))
+   ))
+
+(define my-rule2-setting
+  (list
+   '(label . katakana)
+   '(autocommit . #t)
+   '(prediction . #t)
+   '(wildcard . #f)
+   (cons 'rulefile (my-find-module "katakana-rule.data"))
+   ))
+
+(define my-rule3-setting
+  (list
+   '(label . cj)
+   '(autocommit . #f)
+   '(prediction . #f)
+   '(wildcard . #t)
+   (cons 'rulefile (my-find-module "cangjie-jis-rule.data"))
+   ))
+
+(define my-rule4-setting
+  (list
+   '(label . zenei)
+   '(autocommit . #t)
+   '(prediction . #f)
+   '(wildcard . #f)
+   (cons 'rulefile (my-find-module "zenei-rule.data"))
+   ))
+
+(define my-rule5-setting
+  (list
+   '(label . hankana)
+   '(autocommit . #t)
+   '(prediction . #t)
+   '(wildcard . #f)
+   (cons 'rulefile (my-find-module "hankana-rule.data"))
+   ))
+
+(define test0003-rule-list
+  (list my-rule1-setting my-rule2-setting my-rule3-setting my-rule4-setting my-rule5-setting))
+
 ;; "l" => "ん" "ン" "ﾝ"
 ;; "q" => "っ" "ッ" "ｯ"
 (require "japanese.scm") 
