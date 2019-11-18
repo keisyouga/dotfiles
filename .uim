@@ -54,8 +54,17 @@
    (cons 'rulefile (my-find-module "hankana-rule.data"))
    ))
 
+(define my-rule6-setting
+  (list
+   '(label . cj5)
+   '(autocommit . #f)
+   '(prediction . #f)
+   '(wildcard . #t)
+   (cons 'rulefile (my-find-module "cangjie5-rule.data"))
+   ))
+
 (define test0003-rule-list
-  (list my-rule1-setting my-rule2-setting my-rule3-setting my-rule4-setting my-rule5-setting))
+  (list my-rule1-setting my-rule2-setting my-rule3-setting my-rule4-setting my-rule5-setting my-rule6-setting))
 
 ;; "l" => "ん" "ン" "ﾝ"
 ;; "q" => "っ" "ッ" "ｯ"
