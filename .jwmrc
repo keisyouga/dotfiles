@@ -198,6 +198,8 @@
 
     <Key mask="A" key="Tab">nextstacked</Key>
     <Key mask="AS" key="Tab">prevstacked</Key>
+    <!-- <Key mask="A" key="Tab">next</Key> -->
+    <!-- <Key mask="AS" key="Tab">prev</Key> -->
     <Key mask="A" key="F4">close</Key>
     <Key mask="AC" key="#">desktop#</Key>
     <Key mask="A" key="F1">root:1</Key>
