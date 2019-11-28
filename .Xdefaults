@@ -5,9 +5,9 @@ UXTerm*termName: xterm-256color
 *VT100.metaSendsEscape: true
 
 !! freetype font
-*VT100.faceSize: 9
-*VT100.faceName: DejaVu Sans Mono
-*VT100.faceNameDoublesize: IPAGothic
+#*VT100.faceSize: 9
+*VT100.faceName: DejaVu Sans Mono:pixelsize=14
+*VT100.faceNameDoublesize: IPAGothic:pixelsize=14
 
 !! bitmap font
 !*VT100.utf8: false
