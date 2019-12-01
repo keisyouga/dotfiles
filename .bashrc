@@ -37,7 +37,7 @@ else
   PS1='\[\033[01;32m\]\u\[\033[00;32m\]@\h\[\033[00m\]:\[\033[36;47m\]\w\[\033[00m\]$ '
 fi
 
-export LESS='-r -i -j4 -X -F'
+export LESS='-R -i -j4 -X -F'
 export LESS_TERMCAP_mb=$(printf "\e[1;31m")
 export LESS_TERMCAP_md=$(printf "\e[1;31m")
 export LESS_TERMCAP_me=$(printf "\e[0m")
