@@ -24,4 +24,8 @@ fi
 export PAGER='less'
 export EDITOR='vi'
 
+export LYNX_CFG=$HOME/lynx.cfg
+
+export WWW_HOME='~'
+
 which fortune > /dev/null && fortune
