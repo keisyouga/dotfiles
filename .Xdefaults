@@ -1,4 +1,7 @@
 
+!!! for some application font size
+Xft.dpi: 96
+
 !!! xterm
 XTerm*termName: xterm-256color
 UXTerm*termName: xterm-256color
