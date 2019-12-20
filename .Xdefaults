@@ -11,6 +11,7 @@ UXTerm*termName: xterm-256color
 #*VT100.faceSize: 9
 *VT100.faceName: DejaVu Sans Mono:pixelsize=14
 *VT100.faceNameDoublesize: IPAGothic:pixelsize=14
+*VT100.ximFont: *
 
 !! bitmap font
 !*VT100.utf8: false
@@ -30,7 +31,6 @@ UXTerm*termName: xterm-256color
 !*VT100.utf8Fonts.font: lucidasanstypewriter-12
 !*VT100.utf8Fonts.wideFont: -misc-fixed-medium-r-normal-ja-18-120-100-100-c-180-iso10646-1
 
-!*VT100.ximFont: *
 *VT100.color4: lightblue
 *VT100.reverseVideo: true
 !*VT100.scrollBar: true
