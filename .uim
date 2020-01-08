@@ -1,6 +1,8 @@
 ;;; -*- mode: scheme; coding: euc-jp -*-
 ;;; https://github.com/uim/uim-doc-ja/wiki/CustomizeUim
 
+(define uim-pref-suppress-dot-uim-warning-dialog? #t)
+
 ;;(define default-im-name 'anthy-utf8)
 (define-key generic-on-key? '("<Control>\\" "zenkaku-hankaku"))
 (define-key generic-off-key? '("<Control>\\" "zenkaku-hankaku"))
