@@ -35,6 +35,7 @@ UXTerm*termName: xterm-256color
 *VT100.color4: lightblue
 *VT100.reverseVideo: true
 !*VT100.scrollBar: true
+*VT100.modifyOtherKeys: 1
 
 !!! xclock
 !XClock.Clock.analog: false
