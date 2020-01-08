@@ -10,7 +10,8 @@ UXTerm*termName: xterm-256color
 !! freetype font
 #*VT100.faceSize: 9
 *VT100.faceName: DejaVu Sans Mono:pixelsize=14
-*VT100.faceNameDoublesize: IPAGothic:pixelsize=14
+!*VT100.faceNameDoublesize: IPAGothic:pixelsize=14
+*VT100.faceNameDoublesize: WenQuenYi Zen Hei:pixelsize=14
 *VT100.ximFont: *
 
 !! bitmap font
