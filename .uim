@@ -4,6 +4,7 @@
 (define uim-pref-suppress-dot-uim-warning-dialog? #t)
 
 ;;(define default-im-name 'anthy-utf8)
+(define default-im-name 'test0003)
 (define-key generic-on-key? '("<Control>\\" "zenkaku-hankaku"))
 (define-key generic-off-key? '("<Control>\\" "zenkaku-hankaku"))
 
