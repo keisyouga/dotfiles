@@ -46,7 +46,7 @@
         <TaskList maxwidth="256"/>
 
         <Dock/>
-        <Clock format="%H:%M"><Button mask="123">exec:xclock</Button></Clock>
+        <Clock format="%F %R"><Button mask="123">exec:xclock</Button></Clock>
 
     </Tray>
 
@@ -202,6 +202,7 @@
     <!-- <Key mask="AS" key="Tab">prev</Key> -->
     <Key mask="A" key="F4">close</Key>
     <Key mask="AC" key="#">desktop#</Key>
+    <Key mask="4" key="#">desktop#</Key>
     <Key mask="A" key="F1">root:1</Key>
     <Key mask="A" key="F2">window</Key>
     <Key mask="A" key="F10">maximize</Key>
