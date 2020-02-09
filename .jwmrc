@@ -216,6 +216,7 @@
     <Key mask="AS" key="Down">sendd</Key>
 
 	<!-- screen shot -->
-	<Key key="Print">exec:/bin/sh -c "xwd -root | xwud"</Key>
-	<Key mask="S" key="Print">exec:/bin/sh -c "xwd | xwud"</Key>
+	<Key key="Print">exec:screenshot</Key>
+	<Key mask="S" key="Print">exec:screenshot1</Key>
+	<Key mask="A" key="Print">exec:screenshot2</Key>
 </JWM>
