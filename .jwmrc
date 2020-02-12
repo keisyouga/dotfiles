@@ -219,4 +219,5 @@
 	<Key key="Print">exec:screenshot</Key>
 	<Key mask="S" key="Print">exec:screenshot1</Key>
 	<Key mask="A" key="Print">exec:screenshot2</Key>
+	<Key mask="C" key="Print">exec:screenshot3</Key>
 </JWM>
