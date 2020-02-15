@@ -8,17 +8,13 @@
 (define-key generic-on-key? '("<Control>\\" "zenkaku-hankaku"))
 (define-key generic-off-key? '("<Control>\\" "zenkaku-hankaku"))
 
-(define my-find-module
-  (lambda (scm)
-    (find-module-scm-path uim-plugin-scm-load-path scm)))
-
 (define my-rule1-setting
   (list
    '(label . hiragana)
    '(autocommit . #t)
    '(prediction . #t)
    '(wildcard . #f)
-   (cons 'rulefile (my-find-module "hiragana-rule.data"))
+   '(tablefile . "tables/hiragana.txt")
    ))
 
 (define my-rule2-setting
@@ -27,7 +23,7 @@
    '(autocommit . #t)
    '(prediction . #t)
    '(wildcard . #f)
-   (cons 'rulefile (my-find-module "katakana-rule.data"))
+   '(tablefile . "tables/katakana.txt")
    ))
 
 (define my-rule3-setting
@@ -36,7 +32,7 @@
    '(autocommit . #f)
    '(prediction . #f)
    '(wildcard . #t)
-   (cons 'rulefile (my-find-module "cangjie-jis-rule.data"))
+   '(tablefile . "tables/cj-jis.txt")
    ))
 
 (define my-rule4-setting
@@ -45,7 +41,7 @@
    '(autocommit . #t)
    '(prediction . #f)
    '(wildcard . #f)
-   (cons 'rulefile (my-find-module "zenei-rule.data"))
+   '(tablefile . "tables/zenei.txt")
    ))
 
 (define my-rule5-setting
@@ -54,20 +50,29 @@
    '(autocommit . #t)
    '(prediction . #t)
    '(wildcard . #f)
-   (cons 'rulefile (my-find-module "hankana-rule.data"))
+   '(tablefile . "tables/hankana.txt")
    ))
 
 (define my-rule6-setting
   (list
-   '(label . cj5)
+   '(label . c5)
    '(autocommit . #f)
    '(prediction . #f)
    '(wildcard . #t)
-   (cons 'rulefile (my-find-module "cangjie5-rule.data"))
+   '(tablefile . "/tables/cj5-70000.txt")
+   ))
+
+(define my-rule7-setting
+  (list
+   '(label . t9)
+   '(autocommit . #f)
+   '(prediction . #t)
+   '(wildcard . #t)
+   '(tablefile . "/tables/t9.txt")
    ))
 
 (define test0003-rule-list
-  (list my-rule1-setting my-rule2-setting my-rule3-setting my-rule4-setting my-rule5-setting my-rule6-setting))
+  (list my-rule1-setting my-rule2-setting my-rule3-setting my-rule4-setting my-rule5-setting my-rule6-setting my-rule7-setting))
 
 ;; "l" => "ん" "ン" "ﾝ"
 ;; "q" => "っ" "ッ" "ｯ"
