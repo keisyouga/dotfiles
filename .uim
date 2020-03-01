@@ -84,8 +84,13 @@
 (set! ja-rk-rule-basic
       (append '(((("l") . ()) ("ん" "ン" "ﾝ"))
                 ((("q") . ()) ("っ" "ッ" "ｯ")))
-              ja-rk-rule-basic)) 
+              ja-rk-rule-basic))
 
 (ja-rk-rule-update)
+
+;;(define skk-dcomp-activate? #t)
+(define anthy-select-candidate-by-numeral-key? #t)
+;;(define anthy-use-prediction? #t)
+(define anthy-select-prediction-by-numeral-key? #t)
 
 ;;; vim:ft=scheme:fenc=euc-jp
