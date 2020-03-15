@@ -12,9 +12,16 @@ setxkbmap -model jp106 -layout jp,us,ru,gr -variant ,intl -option grp:shifts_tog
 xrdb -remove
 #xterm -g -0+0 +rv &
 xterm -g +0+0 -rv &
-exec jwm
-#exec ctwm
+
+#exec jwm
+#exec twm
+exec ctwm
+#exec vtwm
 #exec icewm
+#exec fluxbox
 #fspanel &
 #exec openbox
 #exec openbsd-cwm
+#exec dwm
+#exec i3
+#exec awesome

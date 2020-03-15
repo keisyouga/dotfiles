@@ -1,212 +1,372 @@
+# ctwm startup file
 
-NoDefaults
+################################################################
+# safeguard for when errors occur in the remaining config
+
+"Return" = m|s : all : f.exec "xterm&"
+"r" = m|s : all : f.restart
+"q" = m|s : all : f.quit
+
+
+################################################################
+# config start
+
+################
+# fonts
+
+# m4 define
+define(`myfonts14',`"-isas-fangsong ti-medium-r-normal--14-*-*-*-*-*-*-*,-daewoo-gothic-medium-r-normal--14-*-*-*-*-*-*-*,-misc-fixed-medium-r-normal--14-*-*-*-*-*-*-*"')
+define(`myfonts10',`"-isas-fangsong ti-medium-r-normal--10-*-*-*-*-*-*-*,-daewoo-gothic-medium-r-normal--10-*-*-*-*-*-*-*,-misc-fixed-medium-r-normal--10-*-*-*-*-*-*-*"')
+
+TitleFont myfonts14
+MenuFont myfonts14
+IconFont myfonts10
+IconManagerFont myfonts10
+WorkSpaceFont myfonts10
+ResizeFont myfonts14
+
+################
+### window decoration, focus, move, resize
+
+# don't ask position of new window
 RandomPlacement "on"
+
+# default is focus follow pointer (ffp)
 #SloppyFocus
 ClickToFocus
+
+# f.warpring cycles all windows
 WindowRing
+
+# only warp on current workspace
 WarpRingOnScreen
-StayUpMenus
-"Escape" = c : all : f.menu "defops"
-"F1" = m : all : f.menu "defops"
-"F2" = m : all : f.raiselower
-"F3" = m : all : f.menu "windowops"
-"F4" = m : all : f.destroy
-#"Tab" = m : all : f.warpring "next"
-"Tab" = m : all : f.function "next-window"
-#"Tab" = m|s : all : f.warpring "prev"
-"Tab" = m|s : all : f.function "prev-window"
-"F12" = m : all : f.restart
-"F1" = c : all : f.gotoworkspace "One"
-"F2" = c : all : f.gotoworkspace "Two"
-"F3" = c : all : f.gotoworkspace "Three"
-"F4" = c : all : f.gotoworkspace "Four"
-LeftTitleButton ":xpm:menu" = f.menu "windowops"
-LeftTitleButton ":xpm:cross" = f.delete
-RightTitleButton  ":xpm:iconify" = f.iconify
-RightTitleButton ":xpm:resize" = f.resize
-RightTitleButton ":xpm:sunkresize" = f.fullzoom
 
-# button pixmap test
-#LeftTitleButton ":xpm:menu" = f.nop
-#LeftTitleButton ":xpm:dot" = f.nop
-#LeftTitleButton ":xpm:cross" = f.nop
-#LeftTitleButton ":xpm:bar" = f.nop
-#LeftTitleButton ":xpm:vbar" = f.nop
-#LeftTitleButton ":xpm:iconify" = f.nop
-#LeftTitleButton ":xpm:resize" = f.nop
-#LeftTitleButton ":xpm:sunkresize" = f.nop
-#LeftTitleButton ":xpm:box" = f.nop
-#RightTitleButton "%xpm:resize" = f.nop
-#RightTitleButton "%xpm:menu-up" = f.nop
-#RightTitleButton "%xpm:menu-down" = f.nop
-#RightTitleButton "%xpm:resize-out-top" = f.nop
-#RightTitleButton "%xpm:resize-in-top" = f.nop
-#RightTitleButton "%xpm:resize-out-bot" = f.nop
-#RightTitleButton "%xpm:resize-in-bot" = f.nop
-#RightTitleButton "%xpm:maze-out" = f.nop
-#RightTitleButton "%xpm:maze-in" = f.nop
-#RightTitleButton "%xpm:zoom-out" = f.nop
-#RightTitleButton "%xpm:zoom-in" = f.nop
-#RightTitleButton "%xpm:zoom-inout" = f.nop
+# don't move window out of screen and resistance pixels
+DontMoveOff
+MoveOffResistance 80
 
+# restore window focus when switch workspace
+SaveWorkspaceFocus
 
-##########
-# copy from /etc/X11/ctwm/system.ctwmrc
-##########
-NoGrabServer
-RestartPreviousState
-DecorateTransients
-TitleFont	"-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
-ResizeFont	"-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
-MenuFont	"-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
-IconFont	"-adobe-helvetica-bold-r-normal--*-100-*-*-*-*-*-*"
-IconManagerFont	"-adobe-helvetica-bold-r-normal--*-100-*-*-*-*-*-*"
-ShowWorkSpaceManager			# start with workspace manager up
-UseThreeDMenus
-UseThreeDTitles
-UseThreeDIconManagers
+#DecorateTransients
+
+# move/resize behavior
+#OpaqueMove {}
+#NoOpaqueMove {"."}
+#OpaqueResize {}
+#NoOpaqueResize {"."}
+
+# resize method for mouse dragging
+AutoRelativeResize
+
+# win-list raises when pointer come
+AutoRaise {}
+
 UseThreeDBorders
-UseThreeDWMap
-SunkFocusWindowTitle
+ThreeDBorderWidth 5
+#BorderWidth 5
 
-WorkSpaceManagerGeometry        "360x60+60-0" 4
-WorkSpaces {
-    "One"   {"rgb:0/6/6" "rgb:f/f/f" "rgb:0/6/6" "rgb:f/f/f"}
-    "Two"   {"rgb:4/4/6" "rgb:f/f/f" "rgb:4/4/6" "rgb:f/f/f"}
-    "Three" {"rgb:6/4/4" "rgb:f/f/f" "rgb:6/4/4" "rgb:f/f/f"}
-    "Four"  {"rgb:6/6/6" "rgb:f/f/f" "rgb:6/6/6" "rgb:f/f/f"}
-    "Five"  {"rgb:0/4/4" "rgb:f/f/f" "rgb:0/4/4" "rgb:f/f/f"}
-    "Six"   {"rgb:2/2/4" "rgb:f/f/f" "rgb:2/2/4" "rgb:f/f/f"}
-    "Seven" {"rgb:4/2/2" "rgb:f/f/f" "rgb:4/2/2" "rgb:f/f/f"}
-    "Eight" {"rgb:4/4/4" "rgb:f/f/f" "rgb:4/4/4" "rgb:f/f/f"}
+RaiseOnClick
+
+# honor PPosition in WM_NORMAL_HINTS flag
+UsePPosition "on"
+
+# don't show WorkSpaceManager and IconManagers in TwmWindows and TwmAllWindows
+ShortAllWindowsMenus
+
+################
+# titlebar
+################
+
+#SunkFocusWindowTitle
+#NoTitle
+#SqueezeTitle
+TitleJustification "center"
+#NoTitleHighlight
+#PixmapDirectory "/usr/include/X11/pixmaps:/usr/include/X11/bitmaps"
+#Pixmaps { TitleHighlight "xpm:background4.xpm" }
+Pixmaps { TitleHighlight "black" }
+UseThreeDTitles
+TitleShadowDepth 1
+FramePadding 1
+
+# do not place a title bar on these windows
+NoTitle {
+	"TWM Icon Manager"
+	"WorkSpaceManager"
 }
+
+# don't use default title buttons
+NoDefaults
+
+# titlebar buttons
+LeftTitleButton ":xpm:menu" = f.menu "windowops"
+LeftTitleButton ":xpm:dot" = f.occupy
+LeftTitleButton ":xpm:resize" = f.squeeze
+LeftTitleButton ":xpm:box" = f.focus
+RightTitleButton ":xpm:iconify" = f.iconify
+RightTitleButton ":xpm:sunkresize" = f.fullzoom
+RightTitleButton ":xpm:cross" = f.delete
+
+# button test
+# LeftTitleButton ":xpm:menu" = f.nop
+# LeftTitleButton ":xpm:dot" = f.nop
+# LeftTitleButton ":xpm:cross" = f.nop
+# LeftTitleButton ":xpm:bar" = f.nop
+# LeftTitleButton ":xpm:vbar" = f.nop
+# LeftTitleButton ":xpm:iconify" = f.nop
+# LeftTitleButton ":xpm:resize" = f.nop
+# LeftTitleButton ":xpm:sunkresize" = f.nop
+# LeftTitleButton ":xpm:box" = f.nop
+# RightTitleButton "%xpm:resize" = f.nop
+# RightTitleButton "%xpm:menu-up" = f.nop
+# RightTitleButton "%xpm:menu-down" = f.nop
+# RightTitleButton "%xpm:resize-out-top" = f.nop
+# RightTitleButton "%xpm:resize-in-top" = f.nop
+# RightTitleButton "%xpm:resize-out-bot" = f.nop
+# RightTitleButton "%xpm:resize-in-bot" = f.nop
+# RightTitleButton "%xpm:maze-out" = f.nop
+# RightTitleButton "%xpm:maze-in" = f.nop
+# RightTitleButton "%xpm:zoom-out" = f.nop
+# RightTitleButton "%xpm:zoom-in" = f.nop
+# RightTitleButton "%xpm:zoom-inout" = f.nop
+
+################
+# colors
+################
 
 Color {
-    BorderColor           "rgb:0/0/8"
-    DefaultBackground     "rgb:0/8/0"
-    DefaultForeground     "rgb:e/e/e"
-    BorderTileBackground  "rgb:0/8/8"
-    BorderTileForeground  "rgb:0/0/0"
-    TitleBackground       "rgb:0/b/b"
-    TitleForeground       "rgb:0/0/f"
-    MenuBackground        "rgb:f/f/0"
-    MenuForeground        "rgb:0/0/f"
-    MenuTitleBackground   "rgb:b/0/0"
-    MenuTitleForeground   "rgb:b/b/0"
-    IconBackground        "rgb:0/b/b"
-    IconForeground        "rgb:f/f/f"
-    IconBorderColor       "rgb:d/d/d"
-    IconManagerBackground "rgb:0/8/8"
-    IconManagerForeground "rgb:0/f/f"
-    MapWindowBackground   "rgb:8/8/8"
-    MapWindowForeground   "rgb:0/0/0"
+	# used for f.identify and f.version
+	DefaultBackground "#f0f0d0"
+	DefaultForeground "#000000"
+
+	# menu
+	MenuBackground "#ffffc0"
+	MenuForeground "#008000"
+	MenuTitleBackground "#0080a0"
+	MenuTitleForeground "#ffff00"
+	MenuShadowColor "#808040"
+
+	# The following color variables a may take { win-list }
+	# window border
+	BorderColor "#ff4040"
+	BorderTileBackground "#888888"
+	BorderTileForeground "#000000"
+	# titlebar
+	TitleBackground "#20a090"
+	TitleForeground "#eeee88"
+	# workspace manager
+	MapWindowBackground "#aaaaaa"
+	MapWindowForeground "#4000f0"
+	# icon
+	IconBackground "#a0d0a0"
+	IconForeground "#400000"
+	IconBorderColor "#ffaaaa"
+	IconManagerHighlight "#ff0000"
+	IconManagerBackground "#bbbb88"
+	IconManagerForeground "#204040"
 }
 
-IconManagerDontShow {	# do not display these windows in the icon manager
-}
+################
+# icon manager
+################
+ShowIconManager
+#UseThreeDIconManagers
+IconManagerGeometry "800x20-0-0" 2
 
-NoTitle {		# do not place a title bar on these windows
-}
-
-IconManagerGeometry		"202x300-0+0" 1
+# do not display these windows in the icon manager
 IconManagerDontShow {
-    "WorkSpaceManager"
+	"WorkSpaceManager"
 }
 
-AutoRaise {		# automatically raise these windows
-}
+################
+# workspace manager
+################
 
-#
-# Define some useful functions for motion-based actions.
-#
-MoveDelta 3
+ShowWorkSpaceManager
+#UseThreeDWMap
+
+# distinguish current workspace
+ReverseCurrentWorkspace
+
+WorkSpaceManagerGeometry "400x40+0-0" 4
+WorkSpaces { "workspace1" "workspace2" "workspace3" "workspace4" }
+
+################
+# functions
+################
+
 Function "move-or-lower" { f.move f.deltastop f.lower }
 Function "move-or-raise" { f.move f.deltastop f.raise }
 Function "move-or-iconify" { f.move f.deltastop f.iconify }
-Function "next-window" { f.unfocus f.warpring "next" }
-Function "prev-window" { f.unfocus f.warpring "prev" }
+Function "raise-and-focus" { f.raise f.focus }
+Function "raiselower-and-focus" { f.raiselower f.focus }
+Function "fill-4way" { f.fill "right" f.fill "left" f.fill "top" f.fill "bottom" }
 
-#
-# Set some useful bindings.  Sort of uwm-ish, sort of simple-button-ish
-#
-Button1 =	: root		: f.menu "defops"
-Button3 =	: root		: f.menu "windowops"
-
-Button1 = m	: window|icon	: f.function "move-or-lower"
-Button2 = m	: window|icon	: f.iconify
-Button3 = m	: window|icon	: f.function "move-or-raise"
-
-Button1 =	: title		: f.function "move-or-raise"
-Button2 =	: title		: f.raiselower
-
-Button1 =	: icon		: f.function "move-or-iconify"
-Button2 =	: icon		: f.iconify
-
-Button1 =	: iconmgr	: f.iconify
-Button2 =	: iconmgr	: f.iconify
-
-Button1 =	: frame		: f.resize
-Button1 = m	: frame		: f.move
-Button2 =	: frame		: f.raiselower
-#
-# And a menus with the usual things
-#
-menu "defops" {
-    "Main Menu"			f.title
-    "Debian"			f.menu "/Debian"
-    ""				f.separator
-    "Show Icon Manager"		f.showiconmgr
-    "Hide Icon Manager"		f.hideiconmgr
-    ""				f.separator
-    "Show WorkSpace Manager"	f.showworkspacemgr
-    "Hide WorkSpace Manager"	f.hideworkspacemgr
-    ""				f.separator
-    "Refresh screen"		f.refresh
-    ""				f.separator
-    "Exit"			f.menu "Quit-Verify"
+# move window to workspace n
+# assumes workspaces named "workspace1" "workspace2" "workspace3" "workspace4"
+Function "move-to-workspace1" { f.addtoworkspace "workspace1" f.vanish }
+Function "move-to-workspace2" { f.addtoworkspace "workspace2" f.vanish }
+Function "move-to-workspace3" { f.addtoworkspace "workspace3" f.vanish }
+Function "move-to-workspace4" { f.addtoworkspace "workspace4" f.vanish }
+Function "move-to-workspace1-and-follow" {
+	f.function "move-to-workspace1"
+	f.gotoworkspace "workspace1"
+}
+Function "move-to-workspace2-and-follow" {
+	f.function "move-to-workspace2"
+	f.gotoworkspace "workspace2"
+}
+Function "move-to-workspace3-and-follow" {
+	f.function "move-to-workspace3"
+	f.gotoworkspace "workspace3"
+}
+Function "move-to-workspace4-and-follow" {
+	f.function "move-to-workspace4"
+	f.gotoworkspace "workspace4"
 }
 
-menu "Quit-Verify" {
-    "Really quit ctwm?"		f.title
-    "No, restart ctwm"		f.restart
-    "Yes, really quit"		f.quit
+"1" = s|m : all : f.function "move-to-workspace1-and-follow"
+"2" = s|m : all : f.function "move-to-workspace2-and-follow"
+"3" = s|m : all : f.function "move-to-workspace3-and-follow"
+"4" = s|m : all : f.function "move-to-workspace4-and-follow"
+
+################
+# keybindigs
+################
+
+"Escape" = c : all : f.menu "defops"
+"F1" = m : all : f.menu "defops"
+"F2" = m : all : f.menu "windowops"
+"F3" = m : all : f.menu "windowops"
+"F3" = m : all : f.menu "TwmWindows"
+#"F3" = m : all : f.menu "TwmVisible"
+#"F3" = s|m : all : f.menu "TwmAllWindows"
+"F3" = s|m : all : f.menu "TwmWorkspaces"
+"F4" = m : all : f.destroy
+"F5" = m : all : f.raiselower
+"F6" = m : all : f.warpring "next"
+"F8" = m : all : f.resize
+#"F9" = m : all : f.iconify
+"F10" = m : all : f.fullzoom
+"F11" = m : all: f.fullscreenzoom
+"Tab" = m : all : f.warpring "next"
+"Tab" = m|s : all : f.warpring "prev"
+
+"1" = c|m : all : f.gotoworkspace "workspace1"
+"2" = c|m : all : f.gotoworkspace "workspace2"
+"3" = c|m : all : f.gotoworkspace "workspace3"
+"4" = c|m : all : f.gotoworkspace "workspace4"
+"1" = m4 : all : f.gotoworkspace "workspace1"
+"2" = m4 : all : f.gotoworkspace "workspace2"
+"3" = m4: all : f.gotoworkspace "workspace3"
+"4" = m4 : all : f.gotoworkspace "workspace4"
+
+"Right" = m : all : f.pack "right"
+"Left" = m : all : f.pack "left"
+"Up" = m : all : f.pack "top"
+"Down" = m : all : f.pack "bottom"
+
+"Up" = s|m : all : f.initsize
+"Down" = s|m : all : f.function "fill-4way"
+
+"Print" = : all : f.exec "screenshot&"
+"Print" = s : all : f.exec "screenshot1&"
+"Print" = m : all : f.exec "screenshot2&"
+"Print" = c : all : f.exec "screenshot3&"
+
+# mouse
+Button1 = : root : f.menu "defops"
+Button2 = : root : f.menu "TwmWorkspaces"
+Button3 = : root : f.menu "windowops"
+
+Button1 = m : window|icon : f.function "move-or-lower"
+Button2 = m : window|icon : f.iconify
+Button3 = m : window|icon : f.resize
+
+Button1 = : title : f.function "move-or-raise"
+Button2 = : title : f.raiselower
+Button3 = : title : f.menu "windowops"
+
+Button1 = : icon : f.function "move-or-iconify"
+Button2 = : icon : f.iconify
+Button3 = : icon : f.menu "windowops"
+
+Button1 = : iconmgr : f.function "raise-and-focus"
+Button2 = : iconmgr : f.iconify
+Button3 = : iconmgr : f.menu "windowops"
+
+Button1 = : frame : f.resize
+Button1 = m : frame : f.move
+Button2 = : frame : f.raiselower
+
+################
+# menus
+################
+
+# You don't need to keep holding the button
+StayUpMenus
+
+UseThreeDMenus
+
+menu "defops" {
+	"Main Menu" f.title
+	"xterm" !"xterm&"
+	"" f.separator
+	"Windows" f.menu "TwmAllWindows"
+	"Workspaces" f.menu "TwmWorkspaces"
+	"" f.separator
+	"Show Icon Manager" f.showiconmgr
+	"Hide Icon Manager" f.hideiconmgr
+	"Show Workspace Manager" f.showworkspacemgr
+	"Hide Workspace Manager" f.hideworkspacemgr
+	"" f.separator
+	"Version" f.version
+	"Restart" f.restart
+	"Exit" f.quit
 }
 
 menu "windowops" {
-    "Window Ops"		f.title
-    "Occupy..."			f.occupy
-    "Occupy All"		f.occupyall
-    "Vanish"			f.vanish
-    ""				f.separator
-    "(De)Iconify"		f.iconify
-    "Refresh"			f.winrefresh
-    "Info..."			f.identify
-    ""				f.separator
-    "Resize"			f.resize
-    "(Un)Squeeze"		f.squeeze
-    "Zoom"			f.menu "zoomops"
-    ""				f.separator
-    "Move"			f.move
-    "Pack move"			f.movepack
-    "Push move"			f.movepush
-    ""				f.separator
-    "Restart animations"	f.startanimation
-    "Freeze animations"		f.stopanimation
-    ""				f.separator
-    "Close"			f.delete
-    "Kill"			f.destroy
+	"Window Ops" f.title
+	"Restore" f.initsize
+	"Move" f.move
+	"Resize" f.resize
+	"Iconify" f.iconify
+	"Squeeze" f.squeeze
+	"Maximize" f.fullzoom
+	"" f.separator
+	"Zoom..." f.menu "zoomops"
+	"" f.separator
+	"Move to" f.menu "move-to-workspace"
+	"Occupy All" f.occupyall
+	"Occupy..." f.occupy
+	"" f.separator
+	"Raise" f.raise
+	"Lower" f.lower
+	"RaiseLower" f.raiselower
+	"Set Priority 1" f.setpriority "1"
+	"Set Priority 0" f.setpriority "0"
+	"" f.separator
+	"Info..." f.identify
+	"" f.separator
+	"Close" f.delete
+	"Kill" f.destroy
 }
 
 menu "zoomops" {
-    "Zoom Ops"			f.title
-    "Full zoom"			f.fullzoom
-    "Horizontal zoom"		f.horizoom
-    "Vertical zoom"		f.zoom
-    "Top zoom"			f.topzoom
-    "Bottom zoom"		f.bottomzoom
-    "Left zoom"			f.leftzoom
-    "Right zoom"		f.rightzoom
+	"Zoom Ops" f.title
+	"Full zoom" f.fullzoom
+	"Horizontal zoom" f.horizoom
+	"Vertical zoom" f.zoom
+	"Top zoom" f.topzoom
+	"Bottom zoom" f.bottomzoom
+	"Left zoom" f.leftzoom
+	"Right zoom" f.rightzoom
 }
 
-undivert(`/etc/X11/ctwm/menudefs.hook')
-##########
+menu "move-to-workspace" {
+	"workspace1" f.function "move-to-workspace1"
+	"workspace2" f.function "move-to-workspace2"
+	"workspace3" f.function "move-to-workspace3"
+	"workspace4" f.function "move-to-workspace4"
+}
