@@ -15,15 +15,18 @@
 # fonts
 
 # m4 define
-define(`myfonts14',`"-isas-fangsong ti-medium-r-normal--14-*-*-*-*-*-*-*,-daewoo-gothic-medium-r-normal--14-*-*-*-*-*-*-*,-misc-fixed-medium-r-normal--14-*-*-*-*-*-*-*"')
-define(`myfonts10',`"-isas-fangsong ti-medium-r-normal--10-*-*-*-*-*-*-*,-daewoo-gothic-medium-r-normal--10-*-*-*-*-*-*-*,-misc-fixed-medium-r-normal--10-*-*-*-*-*-*-*"')
+define(`myfonts10',`"*--10-*"')
+define(`myfonts12',`"-*-bold-r-normal--12-*-*-*-*-*-iso8859-1,*--12-*"')
+#define(`myfonts12',`"lucidasans-bold-10,*--12-*"')
+#define(`myfonts13',`"*--13-*"')
+#define(`myfonts14',`"*--14-*"')
 
-TitleFont myfonts14
-MenuFont myfonts14
-IconFont myfonts10
+TitleFont myfonts12
+MenuFont myfonts12
+IconFont myfonts12
 IconManagerFont myfonts10
 WorkSpaceFont myfonts10
-ResizeFont myfonts14
+ResizeFont myfonts12
 
 ################
 ### window decoration, focus, move, resize
@@ -172,7 +175,7 @@ Color {
 ################
 ShowIconManager
 #UseThreeDIconManagers
-IconManagerGeometry "800x20-0-0" 2
+IconManagerGeometry "600x16-0-0" 5
 
 # do not display these windows in the icon manager
 IconManagerDontShow {
@@ -201,7 +204,7 @@ Function "move-or-raise" { f.move f.deltastop f.raise }
 Function "move-or-iconify" { f.move f.deltastop f.iconify }
 Function "raise-and-focus" { f.raise f.focus }
 Function "raiselower-and-focus" { f.raiselower f.focus }
-Function "fill-4way" { f.fill "right" f.fill "left" f.fill "top" f.fill "bottom" }
+Function "fill-4way" {f.fill "right" f.fill "left" f.fill "top" f.fill "bottom" }
 
 # move window to workspace n
 # assumes workspaces named "workspace1" "workspace2" "workspace3" "workspace4"
@@ -226,11 +229,6 @@ Function "move-to-workspace4-and-follow" {
 	f.gotoworkspace "workspace4"
 }
 
-"1" = s|m : all : f.function "move-to-workspace1-and-follow"
-"2" = s|m : all : f.function "move-to-workspace2-and-follow"
-"3" = s|m : all : f.function "move-to-workspace3-and-follow"
-"4" = s|m : all : f.function "move-to-workspace4-and-follow"
-
 ################
 # keybindigs
 ################
@@ -238,37 +236,51 @@ Function "move-to-workspace4-and-follow" {
 "Escape" = c : all : f.menu "defops"
 "F1" = m : all : f.menu "defops"
 "F2" = m : all : f.menu "windowops"
-"F3" = m : all : f.menu "windowops"
-"F3" = m : all : f.menu "TwmWindows"
-#"F3" = m : all : f.menu "TwmVisible"
-#"F3" = s|m : all : f.menu "TwmAllWindows"
-"F3" = s|m : all : f.menu "TwmWorkspaces"
+"F3" = m : all : f.menu "TwmVisible"
+"F3" = s|m : all : f.menu "TwmAllWindows"
 "F4" = m : all : f.destroy
 "F5" = m : all : f.raiselower
 "F6" = m : all : f.warpring "next"
-"F8" = m : all : f.resize
-#"F9" = m : all : f.iconify
+"F6" = s|m : all : f.warpring "prev"
+"F7" = m : all : f.initsize
+"F8" = m : all : f.menu "TwmWorkspaces"
+"F8" = s|m : all : f.menu "TwmWindows"
+"F9" = m : all : f.iconify
 "F10" = m : all : f.fullzoom
+"F10" = s|m : all : f.function "fill-4way"
 "F11" = m : all: f.fullscreenzoom
 "Tab" = m : all : f.warpring "next"
 "Tab" = m|s : all : f.warpring "prev"
+"Tab" = m4 : all : f.menu "TwmAllWindows"
 
 "1" = c|m : all : f.gotoworkspace "workspace1"
 "2" = c|m : all : f.gotoworkspace "workspace2"
 "3" = c|m : all : f.gotoworkspace "workspace3"
 "4" = c|m : all : f.gotoworkspace "workspace4"
+
 "1" = m4 : all : f.gotoworkspace "workspace1"
 "2" = m4 : all : f.gotoworkspace "workspace2"
 "3" = m4: all : f.gotoworkspace "workspace3"
 "4" = m4 : all : f.gotoworkspace "workspace4"
 
-"Right" = m : all : f.pack "right"
+"1" = s|m4 : all : f.function "move-to-workspace1-and-follow"
+"2" = s|m4 : all : f.function "move-to-workspace2-and-follow"
+"3" = s|m4 : all : f.function "move-to-workspace3-and-follow"
+"4" = s|m4 : all : f.function "move-to-workspace4-and-follow"
+
+
 "Left" = m : all : f.pack "left"
+"Right" = m : all : f.pack "right"
 "Up" = m : all : f.pack "top"
 "Down" = m : all : f.pack "bottom"
 
-"Up" = s|m : all : f.initsize
-"Down" = s|m : all : f.function "fill-4way"
+"Left" = c|m : all : f.prevworkspace
+"Right" = c|m : all : f.nextworkspace
+
+"Left" = s|m : all : f.fill "left"
+"Right" = s|m : all : f.fill "right"
+"Up" = s|m : all : f.fill "top"
+"Down" = s|m : all : f.fill "bottom"
 
 "Print" = : all : f.exec "screenshot&"
 "Print" = s : all : f.exec "screenshot1&"
@@ -356,12 +368,14 @@ menu "windowops" {
 menu "zoomops" {
 	"Zoom Ops" f.title
 	"Full zoom" f.fullzoom
+	"Full Screen zoom" f.fullscreenzoom
 	"Horizontal zoom" f.horizoom
 	"Vertical zoom" f.zoom
 	"Top zoom" f.topzoom
 	"Bottom zoom" f.bottomzoom
 	"Left zoom" f.leftzoom
 	"Right zoom" f.rightzoom
+	"Fill 4way" f.function "fill-4way"
 }
 
 menu "move-to-workspace" {
