@@ -9,6 +9,10 @@ export GTK_IM_MODULE=uim
 
 setxkbmap -model jp106 -layout jp,us,ru,gr -variant ,intl -option grp:shifts_toggle
 
+if [ -d $HOME/fonts ] ; then
+	xset fp+ $HOME/fonts
+fi
+
 xrdb -remove
 #xterm -g -0+0 +rv &
 xterm -g +0+0 -rv &
