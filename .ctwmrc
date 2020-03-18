@@ -3,9 +3,9 @@
 ################################################################
 # safeguard for when errors occur in the remaining config
 
-"Return" = m|s : all : f.exec "xterm&"
-"r" = m|s : all : f.restart
-"q" = m|s : all : f.quit
+"Return" = s|m : all : f.exec "xterm&"
+"r" = s|m : all : f.restart
+"q" = s|c|m : all : f.quit
 
 
 ################################################################
@@ -20,11 +20,13 @@ define(`myfonts12',`"-*-bold-r-normal--12-*-*-*-*-*-iso8859-1,*--12-*"')
 #define(`myfonts12',`"lucidasans-bold-10,*--12-*"')
 #define(`myfonts13',`"*--13-*"')
 #define(`myfonts14',`"*--14-*"')
+#define(`myfonts16',`"*--16-*"')
+#define(`myfonts24',`"*--24-*"')
 
 TitleFont myfonts12
 MenuFont myfonts12
 IconFont myfonts12
-IconManagerFont myfonts10
+IconManagerFont myfonts12
 WorkSpaceFont myfonts10
 ResizeFont myfonts12
 
@@ -175,7 +177,7 @@ Color {
 ################
 ShowIconManager
 #UseThreeDIconManagers
-IconManagerGeometry "600x16-0-0" 5
+IconManagerGeometry "200x40-0-0" 1
 
 # do not display these windows in the icon manager
 IconManagerDontShow {
