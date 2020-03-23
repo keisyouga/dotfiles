@@ -22,7 +22,7 @@ xterm -g +0+0 -rv &
 exec ctwm
 #exec vtwm
 #exec icewm
-#exec fluxbox
+#exec startfluxbox
 #fspanel &
 #exec openbox
 #exec openbsd-cwm
