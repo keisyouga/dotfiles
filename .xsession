@@ -16,6 +16,8 @@ fi
 xrdb -remove
 #xterm -g -0+0 +rv &
 xterm -g +0+0 -rv &
+xterm -e tail -f ~/.xsession-errors &
+LANG=C xterm -fn 8x13 -fa '' -e htop &
 
 #exec jwm
 #exec twm
