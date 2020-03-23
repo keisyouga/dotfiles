@@ -326,6 +326,7 @@ UseThreeDMenus
 menu "defops" {
 	"Main Menu" f.title
 	"xterm" !"xterm&"
+	"Window Managers" f.menu "window-managers"
 	"" f.separator
 	"Windows" f.menu "TwmAllWindows"
 	"Workspaces" f.menu "TwmWorkspaces"
@@ -385,4 +386,20 @@ menu "move-to-workspace" {
 	"workspace2" f.function "move-to-workspace2"
 	"workspace3" f.function "move-to-workspace3"
 	"workspace4" f.function "move-to-workspace4"
+}
+
+# startwm patch
+menu "window-managers"
+{
+	"Awesome" f.startwm "awesome"
+	"Ctwm" f.startwm "ctwm"
+	"Cwm" f.startwm "openbsd-cwm"
+	"Dwm" f.startwm "dwm"
+	"FluxBox" f.startwm "startfluxbox"
+	"Flwm" f.startwm "flwm"
+	"i3" f.startwm "i3"
+	"IceWM" f.startwm "icewm"
+	"Jwm" f.startwm "jwm"
+	"Twm" f.startwm "twm"
+	"VTWM" f.startwm "vtwm"
 }
