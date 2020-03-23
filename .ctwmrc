@@ -240,7 +240,7 @@ Function "move-to-workspace4-and-follow" {
 "F2" = m : all : f.menu "windowops"
 "F3" = m : all : f.menu "TwmVisible"
 "F3" = s|m : all : f.menu "TwmAllWindows"
-"F4" = m : all : f.destroy
+"F4" = m : all : f.delete
 "F5" = m : all : f.raiselower
 "F6" = m : all : f.warpring "next"
 "F6" = s|m : all : f.warpring "prev"
