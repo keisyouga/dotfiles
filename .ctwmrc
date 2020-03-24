@@ -284,6 +284,11 @@ Function "move-to-workspace4-and-follow" {
 "Up" = s|m : all : f.fill "top"
 "Down" = s|m : all : f.fill "bottom"
 
+"Left" = s|c|m : all : f.changesize "right -10"
+"Right" = s|c|m : all : f.changesize "right +10"
+"Up" = s|c|m : all : f.changesize "bottom -10"
+"Down" = s|c|m : all : f.changesize "bottom +10"
+
 "Print" = : all : f.exec "screenshot&"
 "Print" = s : all : f.exec "screenshot1&"
 "Print" = m : all : f.exec "screenshot2&"
