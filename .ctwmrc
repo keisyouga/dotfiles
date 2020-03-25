@@ -328,6 +328,8 @@ StayUpMenus
 
 UseThreeDMenus
 
+InterpolateMenuColors
+
 menu "defops" {
 	"Main Menu" f.title
 	"xterm" !"xterm&"
@@ -340,6 +342,8 @@ menu "defops" {
 	"Hide Icon Manager" f.hideiconmgr
 	"Show Workspace Manager" f.showworkspacemgr
 	"Hide Workspace Manager" f.hideworkspacemgr
+	"" f.separator
+	"InterpolateMenuColors" f.menu "mymenu"
 	"" f.separator
 	"Version" f.version
 	"Restart" f.restart
@@ -407,4 +411,15 @@ menu "window-managers"
 	"Jwm" f.startwm "jwm"
 	"Twm" f.startwm "twm"
 	"VTWM" f.startwm "vtwm"
+}
+
+# interpolatemenucolors test
+Menu "mymenu"
+{
+	"Title"     ("black":"red")     f.title
+	"entry1"                        f.nop
+	"entry2"                        f.nop
+	"entry3"    ("white":"green")   f.nop
+	"entry4"                        f.nop
+	"entry5"    ("red":"white")     f.nop
 }
