@@ -360,6 +360,7 @@ menu "windowops" {
 	"Maximize" f.fullzoom
 	"" f.separator
 	"Zoom..." f.menu "zoomops"
+	"Preset Size" f.menu "window-size-preset"
 	"" f.separator
 	"Move to" f.menu "move-to-workspace"
 	"Occupy All" f.occupyall
@@ -395,6 +396,17 @@ menu "move-to-workspace" {
 	"workspace2" f.function "move-to-workspace2"
 	"workspace3" f.function "move-to-workspace3"
 	"workspace4" f.function "move-to-workspace4"
+}
+
+menu "window-size-preset" {
+	"160x120" f.changesize "160x120"
+	"320x240" f.changesize "320x240"
+	"640x480" f.changesize "640x480"
+	"800x600" f.changesize "800x600"
+	"1024x768" f.changesize "1024x768"
+	"1280x768" f.changesize "1280x768"
+	"1280x1024" f.changesize "1280x1024"
+	"1600x1200" f.changesize "1600x1200"
 }
 
 # startwm patch
