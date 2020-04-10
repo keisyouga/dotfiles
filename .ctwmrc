@@ -371,6 +371,7 @@ menu "windowops" {
 	"RaiseLower" f.raiselower
 	"Set Priority 1" f.setpriority "1"
 	"Set Priority 0" f.setpriority "0"
+	"f.ring" f.ring
 	"" f.separator
 	"Info..." f.identify
 	"" f.separator
