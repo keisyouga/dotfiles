@@ -39,3 +39,18 @@ UXTerm*termName: xterm-256color
 
 !!! xclock
 !XClock.Clock.analog: false
+
+!!! rxvt-unicode
+URxvt.transparent: true
+URxvt.tintColor: cyan
+URxvt.shading: 80
+URxvt.reverseVideo: true
+URxvt.scrollBar: false
+!! corefont
+URxvt.font: 8x16,-misc-fixed-medium-r-normal--15-140-75-75-c-90-iso8859-5,kanji16,hanzigb16fs,-daewoo-gothic-medium-r-normal--16-120-100-100-c-160-ksc5601.1987-0
+URxvt.boldFont: 8x16,-misc-fixed-medium-r-normal--15-140-75-75-c-90-iso8859-5,kanji16,hanzigb16fs,-daewoo-gothic-medium-r-normal--16-120-100-100-c-160-ksc5601.1987-0
+URxvt.italicFont: 8x16,-misc-fixed-medium-r-normal--15-140-75-75-c-90-iso8859-5,kanji16,hanzigb16fs,-daewoo-gothic-medium-r-normal--16-120-100-100-c-160-ksc5601.1987-0
+URxvt.boldItalicFont: 8x16,-misc-fixed-medium-r-normal--15-140-75-75-c-90-iso8859-5,kanji16,hanzigb16fs,-daewoo-gothic-medium-r-normal--16-120-100-100-c-160-ksc5601.1987-0
+!! xftfont
+! URxvt.font: xft:noto mono:pixelsize=16
+! URxvt.letterSpace: -2
