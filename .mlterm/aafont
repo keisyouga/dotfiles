@@ -1,8 +1,9 @@
-DEFAULT = WenQuanYi Micro Hei Mono 16
+DEFAULT = WenQuanYi Micro Hei Mono 18
 #ISO8859_1 = Liberation Mono 0
 ISO8859_1 = DejaVu Sans Mono 0
-GB2312_80 = WenQuanYi Micro Hei Mono 16
-GBK = WenQuanYi Micro Hei Mono 16
-JISX0208_1983 = WenQuanYi Micro Hei Mono 16
-#JISX0208_1983 = VL Gothic 16
+GB2312_80 = WenQuanYi Micro Hei Mono 18
+GBK = WenQuanYi Micro Hei Mono 18
+JISX0208_1983 = WenQuanYi Micro Hei Mono 18
+#JISX0208_1983 = VL Gothic 18
 ISO10646_UCS4_1 = DejaVu Sans Mono 0
+ISO10646_UCS4_1_FULLWIDTH = WenQuanYi Micro Hei Mono 18
