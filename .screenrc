@@ -27,3 +27,9 @@ layout new 1
 layout autosave on
 
 #term screen-256color
+
+# start from window1 instead of window0
+bind c screen 1
+bind ^c screen 1
+bind 0 select 10
+screen 1
