@@ -22,7 +22,7 @@ bind k focus up
 bind t focus top
 bind b focus bottom
 
-hardstatus alwayslastline "%{dy}%Lw%=%H %Y-%m-%d %c:%s%{-}"
+hardstatus alwayslastline "%{dy}%Lw%=%H %Y-%m-%d %c%{-}"
 layout new 1
 layout autosave on
 
