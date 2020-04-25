@@ -15,6 +15,7 @@ bind ^k
 bind .
 bind ^\
 bind \\
+bind ^c
 bind ^h
 bind h help
 bind j focus down
