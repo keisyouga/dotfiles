@@ -4,6 +4,7 @@ escape ^z^z
 bind z
 defscrollback 2000
 ignorecase on
+cjkwidth off
 
 # show current command in title
 #shelltitle "$|bash"
