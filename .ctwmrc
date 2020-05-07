@@ -255,6 +255,11 @@ Function "move-to-workspace4-and-follow" {
 "Tab" = m|s : all : f.warpring "prev"
 "Tab" = m4 : all : f.menu "TwmAllWindows"
 
+"F1" = c : all : f.gotoworkspace "workspace1"
+"F2" = c : all : f.gotoworkspace "workspace2"
+"F3" = c : all : f.gotoworkspace "workspace3"
+"F4" = c : all : f.gotoworkspace "workspace4"
+
 "1" = c|m : all : f.gotoworkspace "workspace1"
 "2" = c|m : all : f.gotoworkspace "workspace2"
 "3" = c|m : all : f.gotoworkspace "workspace3"
