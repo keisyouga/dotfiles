@@ -177,7 +177,7 @@ Color {
 ################
 ShowIconManager
 #UseThreeDIconManagers
-IconManagerGeometry "200x40-0-0" 1
+IconManagerGeometry "200x60-0-60" 1
 
 # do not display these windows in the icon manager
 IconManagerDontShow {
@@ -194,8 +194,11 @@ ShowWorkSpaceManager
 # distinguish current workspace
 ReverseCurrentWorkspace
 
-WorkSpaceManagerGeometry "400x40+0-0" 4
-WorkSpaces { "workspace1" "workspace2" "workspace3" "workspace4" }
+WorkSpaceManagerGeometry "400x60-0-0" 4
+WorkSpaces {
+	"work01" "work02" "work03" "work04"
+	"work05" "work06" "work07" "work08"
+}
 
 ################
 # functions
@@ -209,26 +212,46 @@ Function "raiselower-and-focus" { f.raiselower f.focus }
 Function "fill-4way" {f.fill "right" f.fill "left" f.fill "top" f.fill "bottom" }
 
 # move window to workspace n
-# assumes workspaces named "workspace1" "workspace2" "workspace3" "workspace4"
-Function "move-to-workspace1" { f.addtoworkspace "workspace1" f.vanish }
-Function "move-to-workspace2" { f.addtoworkspace "workspace2" f.vanish }
-Function "move-to-workspace3" { f.addtoworkspace "workspace3" f.vanish }
-Function "move-to-workspace4" { f.addtoworkspace "workspace4" f.vanish }
-Function "move-to-workspace1-and-follow" {
-	f.function "move-to-workspace1"
-	f.gotoworkspace "workspace1"
+# assumes workspaces named "work01" "work02" "work03" ...
+Function "move-to-work01" { f.addtoworkspace "work01" f.vanish }
+Function "move-to-work02" { f.addtoworkspace "work02" f.vanish }
+Function "move-to-work03" { f.addtoworkspace "work03" f.vanish }
+Function "move-to-work04" { f.addtoworkspace "work04" f.vanish }
+Function "move-to-work05" { f.addtoworkspace "work05" f.vanish }
+Function "move-to-work06" { f.addtoworkspace "work06" f.vanish }
+Function "move-to-work07" { f.addtoworkspace "work07" f.vanish }
+Function "move-to-work08" { f.addtoworkspace "work08" f.vanish }
+Function "move-to-work01-and-follow" {
+	f.function "move-to-work01"
+	f.gotoworkspace "work01"
 }
-Function "move-to-workspace2-and-follow" {
-	f.function "move-to-workspace2"
-	f.gotoworkspace "workspace2"
+Function "move-to-work02-and-follow" {
+	f.function "move-to-work02"
+	f.gotoworkspace "work02"
 }
-Function "move-to-workspace3-and-follow" {
-	f.function "move-to-workspace3"
-	f.gotoworkspace "workspace3"
+Function "move-to-work03-and-follow" {
+	f.function "move-to-work03"
+	f.gotoworkspace "work03"
 }
-Function "move-to-workspace4-and-follow" {
-	f.function "move-to-workspace4"
-	f.gotoworkspace "workspace4"
+Function "move-to-work04-and-follow" {
+	f.function "move-to-work04"
+	f.gotoworkspace "work04"
+}
+Function "move-to-work05-and-follow" {
+	f.function "move-to-work05"
+	f.gotoworkspace "work05"
+}
+Function "move-to-work06-and-follow" {
+	f.function "move-to-work06"
+	f.gotoworkspace "work06"
+}
+Function "move-to-work07-and-follow" {
+	f.function "move-to-work07"
+	f.gotoworkspace "work07"
+}
+Function "move-to-work08-and-follow" {
+	f.function "move-to-work08"
+	f.gotoworkspace "work08"
 }
 
 ################
@@ -255,26 +278,37 @@ Function "move-to-workspace4-and-follow" {
 "Tab" = m|s : all : f.warpring "prev"
 "Tab" = m4 : all : f.menu "TwmAllWindows"
 
-"F1" = c : all : f.gotoworkspace "workspace1"
-"F2" = c : all : f.gotoworkspace "workspace2"
-"F3" = c : all : f.gotoworkspace "workspace3"
-"F4" = c : all : f.gotoworkspace "workspace4"
+# "F1" = c : all : f.gotoworkspace "work01"
+# "F2" = c : all : f.gotoworkspace "work02"
+# "F3" = c : all : f.gotoworkspace "work03"
+# "F4" = c : all : f.gotoworkspace "work04"
 
-"1" = c|m : all : f.gotoworkspace "workspace1"
-"2" = c|m : all : f.gotoworkspace "workspace2"
-"3" = c|m : all : f.gotoworkspace "workspace3"
-"4" = c|m : all : f.gotoworkspace "workspace4"
+"1" = c|m : all : f.gotoworkspace "work01"
+"2" = c|m : all : f.gotoworkspace "work02"
+"3" = c|m : all : f.gotoworkspace "work03"
+"4" = c|m : all : f.gotoworkspace "work04"
+"5" = c|m : all : f.gotoworkspace "work05"
+"6" = c|m : all : f.gotoworkspace "work06"
+"7" = c|m : all : f.gotoworkspace "work07"
+"8" = c|m : all : f.gotoworkspace "work08"
 
-"1" = m4 : all : f.gotoworkspace "workspace1"
-"2" = m4 : all : f.gotoworkspace "workspace2"
-"3" = m4: all : f.gotoworkspace "workspace3"
-"4" = m4 : all : f.gotoworkspace "workspace4"
+"1" = m4 : all : f.gotoworkspace "work01"
+"2" = m4 : all : f.gotoworkspace "work02"
+"3" = m4 : all : f.gotoworkspace "work03"
+"4" = m4 : all : f.gotoworkspace "work04"
+"5" = m4 : all : f.gotoworkspace "work05"
+"6" = m4 : all : f.gotoworkspace "work06"
+"7" = m4 : all : f.gotoworkspace "work07"
+"8" = m4 : all : f.gotoworkspace "work08"
 
-"1" = s|m4 : all : f.function "move-to-workspace1-and-follow"
-"2" = s|m4 : all : f.function "move-to-workspace2-and-follow"
-"3" = s|m4 : all : f.function "move-to-workspace3-and-follow"
-"4" = s|m4 : all : f.function "move-to-workspace4-and-follow"
-
+"1" = s|m4 : all : f.function "move-to-work01-and-follow"
+"2" = s|m4 : all : f.function "move-to-work02-and-follow"
+"3" = s|m4 : all : f.function "move-to-work03-and-follow"
+"4" = s|m4 : all : f.function "move-to-work04-and-follow"
+"5" = s|m4 : all : f.function "move-to-work05-and-follow"
+"6" = s|m4 : all : f.function "move-to-work06-and-follow"
+"7" = s|m4 : all : f.function "move-to-work07-and-follow"
+"8" = s|m4 : all : f.function "move-to-work08-and-follow"
 
 "Left" = m : all : f.pack "left"
 "Right" = m : all : f.pack "right"
@@ -283,6 +317,8 @@ Function "move-to-workspace4-and-follow" {
 
 "Left" = c|m : all : f.prevworkspace
 "Right" = c|m : all : f.nextworkspace
+"Up" = c|m : all : f.upworkspace
+"Down" = c|m : all : f.downworkspace
 
 "Left" = s|m : all : f.fill "left"
 "Right" = s|m : all : f.fill "right"
@@ -398,10 +434,14 @@ menu "zoomops" {
 }
 
 menu "move-to-workspace" {
-	"workspace1" f.function "move-to-workspace1"
-	"workspace2" f.function "move-to-workspace2"
-	"workspace3" f.function "move-to-workspace3"
-	"workspace4" f.function "move-to-workspace4"
+	"work01" f.function "move-to-work01"
+	"work02" f.function "move-to-work02"
+	"work03" f.function "move-to-work03"
+	"work04" f.function "move-to-work04"
+	"work05" f.function "move-to-work05"
+	"work06" f.function "move-to-work06"
+	"work07" f.function "move-to-work07"
+	"work08" f.function "move-to-work08"
 }
 
 menu "window-size-preset" {
