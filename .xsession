@@ -2,8 +2,8 @@ export LANG=ja_JP.UTF-8
 export XMODIFIERS=@im=uim
 #export UIM_CANDWIN_PROG=uim-candwin-gtk3
 #uim-xim &
-export GTK_IM_MODULE=uim
-#export GTK_IM_MODULE=xim
+#export GTK_IM_MODULE=uim
+export GTK_IM_MODULE=xim
 #uim-toolbar-gtk &
 #uim-toolbar-gtk3 &
 
