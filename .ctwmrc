@@ -371,6 +371,9 @@ UseThreeDMenus
 
 InterpolateMenuColors
 
+# ignore case when select menu with keyboard
+IgnoreCaseInMenuSelection
+
 menu "defops" {
 	"Main Menu" f.title
 	"xterm" !"xterm&"
