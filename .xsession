@@ -21,9 +21,9 @@ LANG=C xterm -fn 8x13 -fa '' -e htop &
 
 #exec jwm
 #exec twm
-exec ctwm
+#exec ctwm
 #exec vtwm
-#exec icewm
+exec icewm
 #exec startfluxbox
 #fspanel &
 #exec openbox
