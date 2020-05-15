@@ -1,0 +1,20 @@
+menu "Terminal Emulators" folder {
+	prog xterm - xterm
+	prog mlterm - mlterm
+	prog urxvt - urxvt
+}
+
+menu "window-managers" folder {
+	restart Awesome - awesome
+	restart Ctwm - ctwm
+	restart Cwm - openbsd-cwm
+	restart Dwm - dwm
+	restart FluxBox - startfluxbox
+	restart Flwm - flwm
+	restart i3 - i3
+	restart IceWM - icewm
+	restart /usr/bin/icewm - /usr/bin/icewm
+	restart Jwm - jwm
+	restart Twm - twm
+	restart VTWM - vtwm
+}
