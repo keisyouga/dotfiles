@@ -4,3 +4,7 @@ key "Alt+Left" icesh -w focus left
 key "Alt+Right" icesh -w focus right
 key "Alt+Up" icesh -w focus top
 key "Alt+Down" icesh -w focus bottom
+key "Print" screenshot
+key "Shift+Print" screenshot1
+key "Alt+Print" screenshot2
+key "Ctrl+Print" screenshot3
