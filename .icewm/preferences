@@ -1,0 +1,10 @@
+KeyWinLower=""
+#KeyWinMenu=""
+KeySysWindowList="Alt+F3"
+KeySysShowDesktop=""
+KeySysCollapseTaskBar=""
+WorkspaceNames=" 1 ", " 2 ", " 3 ", " 4 ", " 5 ", " 6 ", " 7 ", " 8 "
+
+# Local Variables:
+# mode: conf-unix
+# End:
