@@ -1,8 +1,13 @@
+# lower winow
 KeyWinLower=""
 #KeyWinMenu=""
+# window list
 KeySysWindowList="Alt+F3"
+# show desktop
 KeySysShowDesktop=""
+# show/hide taskbar
 KeySysCollapseTaskBar=""
+# workspaces
 WorkspaceNames=" 1 ", " 2 ", " 3 ", " 4 ", " 5 ", " 6 ", " 7 ", " 8 "
 
 # Local Variables:
