@@ -1,3 +1,5 @@
+# super modifier is ctrl+alt
+ModSuperIsCtrlAlt=0
 # lower winow
 KeyWinLower=""
 #KeyWinMenu=""
