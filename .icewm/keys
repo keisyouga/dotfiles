@@ -9,7 +9,8 @@ key "Shift+Print" screenshot1
 key "Alt+Print" screenshot2
 key "Ctrl+Print" screenshot3
 
-# use Super+1 ... Super+8 bindings even if ModSuperIsCtrlAlt=0
+# settings for ModSuperIsCtrlAlt=0
+# simulate Alt+Ctrl+[1..9] (KeySysWorkspace[1..9])
 key "Super+1" icesh -r setWorkspace ' 1 '
 key "Super+2" icesh -r setWorkspace ' 2 '
 key "Super+3" icesh -r setWorkspace ' 3 '
@@ -19,12 +20,13 @@ key "Super+6" icesh -r setWorkspace ' 6 '
 key "Super+7" icesh -r setWorkspace ' 7 '
 key "Super+8" icesh -r setWorkspace ' 8 '
 key "Super+9" icesh -r setWorkspace ' 9 '
-key "Super+Shift+1" icesh -w focus setWorkspace ' 1 '
-key "Super+Shift+2" icesh -w focus setWorkspace ' 2 '
-key "Super+Shift+3" icesh -w focus setWorkspace ' 3 '
-key "Super+Shift+4" icesh -w focus setWorkspace ' 4 '
-key "Super+Shift+5" icesh -w focus setWorkspace ' 5 '
-key "Super+Shift+6" icesh -w focus setWorkspace ' 6 '
-key "Super+Shift+7" icesh -w focus setWorkspace ' 7 '
-key "Super+Shift+8" icesh -w focus setWorkspace ' 8 '
-key "Super+Shift+8" icesh -w focus setWorkspace ' 9 '
+# simulate Alt+Ctrl+Shift[1..9] (KeySysWorkspace[1..9]TakeWin)
+key "Super+Shift+1" sh -c "id=`icesh -w focus id`; icesh -w $id setWorkspace ' 1 ' -w $id activate"
+key "Super+Shift+2" sh -c "id=`icesh -w focus id`; icesh -w $id setWorkspace ' 2 ' -w $id activate"
+key "Super+Shift+3" sh -c "id=`icesh -w focus id`; icesh -w $id setWorkspace ' 3 ' -w $id activate"
+key "Super+Shift+4" sh -c "id=`icesh -w focus id`; icesh -w $id setWorkspace ' 4 ' -w $id activate"
+key "Super+Shift+5" sh -c "id=`icesh -w focus id`; icesh -w $id setWorkspace ' 5 ' -w $id activate"
+key "Super+Shift+6" sh -c "id=`icesh -w focus id`; icesh -w $id setWorkspace ' 6 ' -w $id activate"
+key "Super+Shift+7" sh -c "id=`icesh -w focus id`; icesh -w $id setWorkspace ' 7 ' -w $id activate"
+key "Super+Shift+8" sh -c "id=`icesh -w focus id`; icesh -w $id setWorkspace ' 8 ' -w $id activate"
+key "Super+Shift+9" sh -c "id=`icesh -w focus id`; icesh -w $id setWorkspace ' 9  ' -w $id activate"
