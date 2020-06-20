@@ -10,6 +10,12 @@ key "Alt+Right" icesh -w focus right
 key "Alt+Up" icesh -w focus top
 key "Alt+Down" icesh -w focus bottom
 
+# window resize
+key "Alt+Shift+Left" icesh -w focus sizeby -20 0
+key "Alt+Shift+Right" icesh -w focus sizeby 20 0
+key "Alt+Shift+Up" icesh -w focus sizeby 0 -20
+key "Alt+Shift+Down" icesh -w focus sizeby 0 20
+
 # screen shot
 key "Print" screenshot
 key "Shift+Print" screenshot1
