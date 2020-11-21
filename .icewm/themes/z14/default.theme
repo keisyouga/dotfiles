@@ -1,0 +1,11 @@
+Look=pixmap
+TitleButtonsLeft="s"
+TitleButtonsRight="xmi"
+TitleButtonsSupported="xsmi"
+ShowMenuButtonIcon=0
+TitleBarHeight=14
+TitleFontName="-*-*-*-*-*--14-*-*-*-*-*-*-*"
+TitleBarJustify=50
+BorderSizeX=2
+BorderSizeY=2
+
