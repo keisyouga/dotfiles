@@ -1,7 +1,7 @@
 Look=pixmap
-TitleButtonsLeft="s"
+TitleButtonsLeft="sd"
 TitleButtonsRight="xmi"
-TitleButtonsSupported="xsmi"
+TitleButtonsSupported="xsmid"
 ShowMenuButtonIcon=0
 TitleBarHeight=14
 TitleFontName="-*-*-*-*-*--14-*-*-*-*-*-*-*"
