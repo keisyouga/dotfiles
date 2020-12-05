@@ -4,11 +4,11 @@ key "Alt+Shift+Enter" xterm
 # restart icewm
 key "Alt+Shift+r" icesh restart
 
-# window move
-key "Alt+Left" icesh -w focus left
-key "Alt+Right" icesh -w focus right
-key "Alt+Up" icesh -w focus top
-key "Alt+Down" icesh -w focus bottom
+# # window move
+key "Alt+Left" icesh -w focus moveby -20 0
+key "Alt+Right" icesh -w focus moveby 20 0
+key "Alt+Up" icesh -w focus moveby 0 -20
+key "Alt+Down" icesh -w focus moveby 0 20
 
 # window resize
 key "Alt+Shift+Left" icesh -w focus sizeby -20 0
