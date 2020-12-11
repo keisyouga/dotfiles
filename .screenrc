@@ -32,7 +32,8 @@ bind >
 bind <
 bind =
 
-hardstatus alwayslastline "%{dy}%Lw%=%H %Y-%m-%d %c%{-}"
+caption always "%?%F%{.G}%:%{.w}%?%{!rr}%-Lw%{!rr}%n%f %t%{!rr}%+Lw%? [%h]%?%?%F%=%H %Y-%m/%d %c%?%{-}"
+#hardstatus alwayslastline "%{dy}%Lw%=%H %Y-%m-%d %c%{-}"
 layout new 1
 layout autosave on
 
