@@ -19,7 +19,9 @@ bind ^\
 bind \\
 bind ^c
 bind ^h
-bind h help
+#bind h help
+bind h focus left
+bind l focus right
 bind j focus down
 bind k focus up
 bind t focus top
