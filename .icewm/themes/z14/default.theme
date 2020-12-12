@@ -1,4 +1,4 @@
-Look=pixmap
+Look=nice
 TitleButtonsLeft="sd"
 TitleButtonsRight="xmi"
 TitleButtonsSupported="xsmid"
@@ -8,4 +8,3 @@ TitleFontName="-*-*-*-*-*--14-*-*-*-*-*-*-*"
 TitleBarJustify=50
 BorderSizeX=2
 BorderSizeY=2
-
