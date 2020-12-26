@@ -1,11 +1,11 @@
-# dotfiles
+# my dotfiles
 
-# my memo
+## setup
 ```sh
 cd $HOME
 git clone URL
-ln -s dotfiles/.vimrc ./
-ln -s dotfiles/.tmux.conf ./
+ln -s dotfiles/.bashrc ./
+ln -s dotfiles/.profile ./
   .
   .
   .
