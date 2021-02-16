@@ -17,11 +17,11 @@ xrdb -remove
 #xterm -g -0+0 +rv &
 xterm -g +0+0 -rv &
 
+type icewm && exec icewm
 #exec jwm
 #exec twm
 #exec ctwm
 #exec vtwm
-exec icewm
 #exec startfluxbox
 #fspanel &
 #exec openbox
@@ -29,3 +29,4 @@ exec icewm
 #exec dwm
 #exec i3
 #exec awesome
+xterm
