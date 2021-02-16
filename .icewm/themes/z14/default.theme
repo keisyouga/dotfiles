@@ -8,3 +8,8 @@ TitleFontName="-*-*-*-*-*--14-*-*-*-*-*-*-*"
 TitleBarJustify=50
 BorderSizeX=2
 BorderSizeY=2
+
+ColorNormalTitleBar="rgb:40/40/40"
+ColorNormalTitleBarText="rgb:C0/C0/C0"
+ColorActiveTitleBar="rgb:40/40/F0"
+ColorActiveTitleBarText="rgb:F0/F0/40"
