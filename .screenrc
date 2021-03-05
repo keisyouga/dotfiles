@@ -32,6 +32,11 @@ bind >
 bind <
 bind =
 
+# open new shell with new region
+# if you want to just split, use C-a :split
+bind S eval split focus screen
+bind | eval "split -v" focus screen
+
 caption always "%{= .y}%S%{= bk} %-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<%? [%h]%?%?%F%=%H %Y-%m/%d %c%?%{-}"
 #hardstatus alwayslastline "%{dy}%Lw%=%H %Y-%m-%d %c%{-}"
 layout new 1
