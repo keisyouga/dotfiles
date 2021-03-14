@@ -37,6 +37,10 @@ bind =
 bind S eval split focus screen
 bind | eval "split -v" focus screen
 
+# C-z page up: enter copy mode and scroll one page up.
+# adjust with escape setting
+bindkey -t "^z^[[5~" eval copy "stuff H" "stuff ^B"
+
 caption always "%{= .y}%S%{= bk} %-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<%? [%h]%?%?%F%=%H %Y-%m/%d %c%?%{-}"
 #hardstatus alwayslastline "%{dy}%Lw%=%H %Y-%m-%d %c%{-}"
 layout new 1
