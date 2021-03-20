@@ -6,8 +6,8 @@ ShowMenuButtonIcon=0
 TitleBarHeight=14
 TitleFontName="-*-*-*-*-*--14-*-*-*-*-*-*-*"
 TitleBarJustify=50
-BorderSizeX=2
-BorderSizeY=2
+BorderSizeX=5
+BorderSizeY=5
 
 ColorNormalTitleBar="rgb:40/40/40"
 ColorNormalTitleBarText="rgb:C0/C0/C0"
