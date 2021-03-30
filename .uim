@@ -1,6 +1,7 @@
 ;;; -*- mode: scheme; coding: euc-jp -*-
 ;;; https://github.com/uim/uim-doc-ja/wiki/CustomizeUim
 
+
 (define uim-pref-suppress-dot-uim-warning-dialog? #t)
 
 ;;(define default-im-name 'anthy-utf8)
@@ -73,6 +74,43 @@
 
 (define test0003-rule-list
   (list my-rule1-setting my-rule2-setting my-rule3-setting my-rule4-setting my-rule5-setting my-rule6-setting my-rule7-setting))
+
+;; tweak iconic-label which defines in /usr/share/uim/im-switcher.scm 
+(define imsw-iconic-label-alist
+  '((direct           . "-")
+    (ajax-ime         . "Aj")
+    (anthy            . "An")
+    (anthy-utf8       . "An")
+    (byeoru           . "B")
+    (baidu-olime-jp   . "Bj")
+    (canna            . "Ca")
+    (chewing          . "Ch")
+    (elatin           . "E")
+    (hangul2          . "H2")
+    (hangul3          . "H3")
+    (ipa-x-sampa      . "I")
+    (latin            . "Lt")
+    (look             . "Lo")
+    (mana             . "Ma")
+    (mozc             . "Mz")
+    (pinyin-big5      . "Pi")
+    (pyunihan         . "Py")
+    (prime            . "Pm")
+    (romaja           . "R")
+    (sj3              . "Sj")
+    (skk              . "Sk")
+    (tcode            . "Tc")
+    (tutcode          . "Tu")
+    (trycode          . "Tr")
+    (viqr             . "V")
+    (wb86             . "Wb")
+    (wnn              . "Wn")
+    (yahoo-jp         . "Yj")
+    (google-cgiapi-jp . "Gj")
+    (zm               . "Zm")
+    (switchtable      . "Sw")
+    (test0003         . "03")
+    ))
 
 ;; "l" => "ん" "ン" "ﾝ"
 ;; "q" => "っ" "ッ" "ｯ"
