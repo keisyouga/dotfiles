@@ -5,7 +5,7 @@
 (define uim-pref-suppress-dot-uim-warning-dialog? #t)
 
 ;;(define default-im-name 'anthy-utf8)
-(define default-im-name 'test0003)
+(define default-im-name 'switchtable)
 (define-key generic-on-key? '("<Control>\\" "zenkaku-hankaku"))
 (define-key generic-off-key? '("<Control>\\" "zenkaku-hankaku"))
 
@@ -72,7 +72,7 @@
    '(tablefile . "/tables/t9.txt")
    ))
 
-(define test0003-rule-list
+(define switchtable-rule-list
   (list my-rule1-setting my-rule2-setting my-rule3-setting my-rule4-setting my-rule5-setting my-rule6-setting my-rule7-setting))
 
 ;; tweak iconic-label which defines in /usr/share/uim/im-switcher.scm 
@@ -109,7 +109,6 @@
     (google-cgiapi-jp . "Gj")
     (zm               . "Zm")
     (switchtable      . "Sw")
-    (test0003         . "03")
     ))
 
 ;; "l" => "¤ó" "¥ó" "ŽÝ"
