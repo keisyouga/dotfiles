@@ -12,6 +12,9 @@ KeySysCollapseTaskBar=""
 # workspaces
 WorkspaceNames=" 1 ", " 2 ", " 3 ", " 4 ", " 5 ", " 6 ", " 7 ", " 8 "
 
+#  Use double-height task bar
+TaskBarDoubleHeight=1 # 0/1
+
 # Local Variables:
 # mode: conf-unix
 # End:
