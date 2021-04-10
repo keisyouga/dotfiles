@@ -15,6 +15,9 @@ WorkspaceNames=" 1 ", " 2 ", " 3 ", " 4 ", " 5 ", " 6 ", " 7 ", " 8 "
 #  Use double-height task bar
 TaskBarDoubleHeight=1 # 0/1
 
+#  Limit size of windows to screen.
+LimitSize=0 # 0/1
+
 #  Limit position of windows to screen.
 LimitPosition=0 # 0/1
 
