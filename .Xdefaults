@@ -38,7 +38,7 @@ UXTerm*termName: xterm-256color
 *VT100.modifyOtherKeys: 1
 
 !!! xclock
-!XClock.Clock.analog: false
+XClock.Clock.analog: false
 
 !!! rxvt-unicode
 URxvt.transparent: true

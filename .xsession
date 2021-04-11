@@ -7,16 +7,24 @@ export GTK_IM_MODULE=xim
 #uim-toolbar-gtk &
 #uim-toolbar-gtk3 &
 
+# set keyboard
+# model: jp106, layout: jp|us(intl)|ru|gr, switch layout by lshift+rshift
+# see also xkeyboard-config(7)
 setxkbmap -model jp106 -layout jp,us,ru,gr -variant ,intl -option grp:shifts_toggle
 
+# add font path
 if [ -d $HOME/fonts ] ; then
 	xset fp+ $HOME/fonts
 fi
 
+# for using ~/.Xdefaults, remove all resources
 xrdb -remove
+
+# x terminal emulator
 #xterm -g -0+0 +rv &
 xterm -g +0+0 -rv &
 
+# window manager
 type icewm && exec icewm
 #exec jwm
 #exec twm
