@@ -21,10 +21,6 @@ LimitSize=0 # 0/1
 #  Limit position of windows to screen.
 LimitPosition=0 # 0/1
 
-#  Raise a selected window while Alt+Tabbing in the QuickSwitch.
-# workaround for preserve window stack order in version 2.3.1
-QuickSwitchRaiseCandidate=1 # 0/1
-
 # Local Variables:
 # mode: conf-unix
 # End:
