@@ -13,3 +13,6 @@ ColorNormalTitleBar="rgb:40/40/40"
 ColorNormalTitleBarText="rgb:C0/C0/C0"
 ColorActiveTitleBar="rgb:40/40/F0"
 ColorActiveTitleBarText="rgb:F0/F0/40"
+
+ColorNormalBorder="rgb:80/80/80"
+ColorActiveBorder="rgb:40/F0/C0"
